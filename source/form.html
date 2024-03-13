@@ -38,15 +38,15 @@
       </nav>
     </header>
   </div>
-  <main class="main-container__form">
-    <div class="wrapper-form__title">
+  <main class="main-container">
+    <div class="wrapper-title">
       <h1 class="title">Подбор программы</h1>
     </div>
     <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-    <form class="form form__cat" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="form-cat" action="https://echo.htmlacademy.ru/" method="post">
       <h2 class="visually-hidden">Заполните данные своего котика</h2>
-      <p class="field__group field-group__form">
+      <p class="field-group field-group__form">
         <label class="visually-hidden" for="name">Имя:*</label>
         <input class="field" type="text" id="name" name="name" placeholder="Барсик" required>
       </p>
@@ -58,22 +58,22 @@
         <label class="visually-hidden" for="age">Возраст (лет):</label>
         <input class="field" type="text" id="age" name="age" placeholder="7">
       </p>
-      <div class="wrapper-form__group-option">
-        <fieldset class="form-group__option">
-          <ul class="option__list">
-            <li class="option-list__item">
+      <div class="form-wrapper">
+        <fieldset class="group-option">
+          <ul class="group-option__list">
+            <li class="group-option__item">
               <label class="control">
                 <input class="control-input" type="radio" name="option" value="Похудение">
                 Похудение
               </label>
             </li>
-            <li class="option-list__item">
+            <li class="group-option__item">
               <label class="control">
                 <input class="control-input" type="radio" name="option" value="Набор массы">
                 Набор массы
               </label>
             </li>
-            <li class="option-list__item">
+            <li class="group-option__item">
               <label class="control">
                 <input class="control-input" type="radio" name="option" value="Не знаю (Нужен ваш совет)">
                 Не знаю (Нужен ваш совет)
@@ -83,9 +83,9 @@
         </fieldset>
       </div>
 
-      <form class="form form__owner" action="https://echo.htmlacademy.ru/" method="post">
-        <h2 class="form__title">Контактные данные (владельца кота)</h2>
-        <p class="field__group field-group__form">
+      <form class="form-owner" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="form-owner__title">Контактные данные (владельца кота)</h2>
+        <p class="field-group field-group__form">
           <label for="mail">E-mail:*</label>
           <input class="field" type="email" id="mail" name="mail" placeholder="кuklachev@gmail.com" required>
         </p>
@@ -95,8 +95,8 @@
         </p>
       </form>
 
-      <form class="form form__comment" action="https://echo.htmlacademy.ru/" method="post">
-        <h2 class="form__title">Комментарий</h2>
+      <form class="comment-form" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="comment-form__title">Комментарий</h2>
         <p class="field__group field-group__form">
           <label class="visually-hidden" for="text">Расскажите обо всех повадках кота</label>
           <textarea class="field field__multiline" id="text" name="text"
@@ -104,29 +104,29 @@
         </p>
       </form>
 
-      <form class="form form__checkbox" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form-group__option">
+      <form class="checkbox-form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="checkbox-form_fieldset">
 
-          <ul class="option__list">
-            <li class="option-list__item">
+          <ul class="option">
+            <li class="option__item">
               <label class="control">
                 <input class="control-input" type="checkbox" name="option" value="sweetener" checked>
                 сахарозаменитель
               </label>
             </li>
-            <li class="catalog-filter-list-item">
+            <li class="option__item">
               <label class="control">
                 <input class="control-input" type="checkbox" name="option" value="milk">
                 молоко
               </label>
             </li>
-            <li class="catalog-filter-list-item">
+            <li class="option__item">
               <label class="control">
                 <input class="control-input" type="checkbox" name="option" value="water">
                 питьевая вода
               </label>
             </li>
-            <li class="catalog-filter-list-item">
+            <li class="option__item">
               <label class="control">
                 <input class="control-input" type="checkbox" name="option" value="vitamins">
                 витамины
@@ -134,7 +134,7 @@
             </li>
           </ul>
         </fieldset>
-        <div class="wrapper-form__button">
+        <div class="form-wrapper__button">
           <button class="button form__button" type="submit">Отправить заявку</button>
           <div>
       </form>
@@ -144,11 +144,9 @@
 
   <footer class="footer">
     <section class="contacts">
-      <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров</h3>
+      <h2 class="contacts__text">Приглашаем к сотрудничеству дилеров</h2>
       <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-    </section>
-    <section class="map">
-      <h2 class="visually-hidden">Как нас найти</h2>
+      <div class="map"></div>
     </section>
     <a class="logo">
       <img class="logo__image" src="./img/logo2.svg" width="128" height="24" alt="Логотип Кэт энерджи">
