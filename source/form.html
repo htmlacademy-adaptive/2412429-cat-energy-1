@@ -41,8 +41,8 @@
   <main class="main-container">
     <h1 class="main-container__title">Подбор программы</h1>
     <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
-
     <h2 class="visually-hidden">Заполните данные своего котика</h2>
+
     <form class="form" action="https://echo.htmlacademy.ru/" method="post">
       <p class="field-group">
         <label class="visually-hidden" for="name">Имя:*</label>
@@ -57,22 +57,22 @@
         <input class="field" type="text" id="age" name="age" placeholder="7">
       </p>
 
-      <legend class="visually-hidden">Выбор программы</legend>
       <fieldset class="form__fieldset">
-        <ul class="group-options__list">
-          <li class="group-options__item">
+        <legend class="visually-hidden">Выбор программы</legend>
+        <ul class="option">
+          <li class="option__item">
             <label class="radio">
               <input class="radio-input" type="radio" name="option" value="Похудение">
               Похудение
             </label>
           </li>
-          <li class="group-options__item">
+          <li class="option__item">
             <label class="radio">
               <input class="radio-input" type="radio" name="option" value="Набор массы">
               Набор массы
             </label>
           </li>
-          <li class="group-options__item">
+          <li class="option__item">
             <label class="radio">
               <input class="radio-input" type="radio" name="option" value="Не знаю (Нужен ваш совет)">
               Не знаю (Нужен ваш совет)
@@ -81,8 +81,8 @@
         </ul>
       </fieldset>
 
-      <legend class="form__title">Контактные данные (владельца кота)</legend>
       <fieldset class="form__fieldset">
+        <legend class="form__title">Контактные данные (владельца кота)</legend>
         <p class="field-group">
           <label for="mail">E-mail:*</label>
           <input class="field" type="email" id="mail" name="mail" placeholder="кuklachev@gmail.com" required>
@@ -93,8 +93,8 @@
         </p>
       </fieldset>
 
-      <legend class="form__title">Комментарий</legend>
       <fieldset class="form__fieldset">
+        <legend class="form__title">Комментарий</legend>
         <p class="field-group">
           <label class="visually-hidden" for="text">Расскажите обо всех повадках кота</label>
           <textarea class="field-multiline" id="text" name="text"
@@ -102,8 +102,8 @@
         </p>
       </fieldset>
 
-      <legend class="form__title">Дополнително</legend>
       <fieldset class="form__fieldset">
+        <legend class="form__title">Дополнително</legend>
         <ul class="option">
           <li class="option__item">
             <label class="checkbox">
