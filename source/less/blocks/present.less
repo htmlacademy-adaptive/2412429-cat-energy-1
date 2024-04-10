@@ -1,0 +1,29 @@
+
+
+.present__fullscreen {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 175px;
+    left: 0;
+    z-index: -1;
+    height: 290px;
+    background-image: @gradient-green, url("../img/cat-green-2.png");
+    background-repeat: no-repeat;
+    background-position: 0 0, 50% 100%;
+  }
+}
+
+.present__text {
+  margin: 0;
+  padding-top: 187px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: @color-white;
+  padding-inline: 50px;
+}

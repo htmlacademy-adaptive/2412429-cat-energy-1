@@ -1,0 +1,44 @@
+
+.additional-cards {
+  list-style-type: none;
+}
+
+.additional-cards__item {
+  display: grid;
+  padding-top: 14px;
+  padding-bottom: 19px;
+  gap: 13px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.additional-cards__item:last-child {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.additional-cards__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: @font-primary;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.additional-cards__params {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.additional-cards__values {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: @font-basic;
+
+  &--secondary {
+    display: grid;
+    justify-content: end;
+  }
+}
+

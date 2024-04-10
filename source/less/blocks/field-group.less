@@ -1,0 +1,37 @@
+
+.field-group {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @font-primary;
+  text-transform: uppercase;
+  gap: 14px;
+}
+
+.field-group__field {
+  padding-inline: 16px;
+  outline: 1px solid #e7e7e7;
+
+  &--multiline {
+    display: grid;
+    grid-column: 1 / -1;
+    padding-block: 12px;
+    padding-inline: 14px;
+  }
+}
+
+.field {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 45px;
+  font: inherit;
+  text-transform: uppercase;
+  background-color: @color-white;
+  border: none;
+
+  &--multiline {
+    min-height: 150px;
+  }
+}

@@ -1,0 +1,30 @@
+
+.container {
+  max-width: 1220px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media @tablet {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.mobile-line() {
+  @media @mobile {
+    content: "";
+    position: absolute;
+    right: -20px;
+    left: -20px;
+    height: 1px;
+    background-color: #ebebeb;
+  }
+}
+
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
