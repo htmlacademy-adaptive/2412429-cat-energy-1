@@ -1,7 +1,23 @@
-
-
 .options {
   display: grid;
   list-style: none;
   gap: 24px;
+
+  &--radio {
+    &::before {
+      .mobile-line ();
+    }
+  }
+
+  &--radio {
+    &::after {
+      .mobile-line ();
+      bottom: 0;
+    }
+  }
+}
+
+.options__item {
+  display: grid;
+  gap: 10px;
 }

@@ -37,8 +37,6 @@
     "source/img/**/*.svg",
     "source/less/**/*.less"
   ],
-  "engines": {
-    "node": "^16"
-  },
+
   "type": "module"
 }

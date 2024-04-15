@@ -1,23 +1,15 @@
-
-
-.form-container__wrapper {
-  .container ();
-}
-
-.form-container__title {
+.form-container {
   position: relative;
   padding-top: 18px;
 
-
   &::before {
-    content: "";
-    position: absolute;
+    .mobile-line ();
     top: -10px;
-    right: -20px;
-    left: -20px;
-    height: 1px;
-    background-color: #d9d9d9;
   }
+}
+
+.form-container__title {
+  margin: 0;
 }
 
 .form-container__text {

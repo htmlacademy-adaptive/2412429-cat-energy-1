@@ -1,10 +1,10 @@
-
 .main-container {
   display: grid;
   gap: 20px;
 }
 
 .main-container__title {
+  margin: 0;
   font-size: 36px;
   line-height: 36px;
   font-family: @font-primary;
@@ -13,6 +13,19 @@
 .main-container__programs {
   .container ();
   display: grid;
+  min-width: 280px;
+  margin-top: 20px;
+  margin-bottom: 0;
   padding: 0;
   gap: 20px;
+}
+
+.main-container__advantages {
+  .container ();
+  padding-bottom: 29px;
+}
+
+.main-container__example {
+  .container ();
+  padding-top: 25px;
 }

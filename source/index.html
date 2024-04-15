@@ -21,17 +21,17 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="http://localhost:3000/">
+              <a href="#!">
                 Главная
               </a>
             </li>
             <li class="site-list__item">
-              <a href="http://localhost:3000/catalog.html">
+              <a href="catalog.html">
                 Каталог продукции
               </a>
             </li>
             <li class="site-list__item">
-              <a href="http://localhost:3000/form.html">
+              <a href="form.html">
                 Подбор программы
               </a>
             </li>
@@ -40,16 +40,15 @@
       </nav>
     </header>
 
-    <div class="wrapper-program">
-      <section class="wrapper-program__program program">
-        <h1 class="program__title title">Функциональное питание для котов</h1>
-        <p class="program__text">Занялся собой? Займись котом!</p>
-        <img class="program__image" src="./img/content-picture.png" width="280" height="270"
-          alt="Картинка банки с кормом">
-        <button class="button program__button" type="button">Подобрать программу</button>
-      </section>
-    </div>
+    <section class="page-body__program program">
+      <h1 class="program__title title">Функциональное питание для котов</h1>
+      <p class="program__text">Занялся собой? Займись котом!</p>
+      <img class="program__image" src="./img/content-picture.png" width="280" height="270"
+        alt="Картинка банки с кормом">
+      <button class="button button--program" type="button">Подобрать программу</button>
+    </section>
   </div>
+
   <main class="main-container">
     <ul class="main-container__programs programs">
       <li class="programs__item">
@@ -78,52 +77,48 @@
       </li>
     </ul>
 
-    <div class="wrapper-advantages">
-      <section class="wrapper-advantages__advantages advantages">
-        <h2 class="advantages__title">Как это работает</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
-          </li>
-          <li class="advantages__item">
-            <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-            </p>
-          </li>
-          <li class="advantages__item">
-            <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-          </li>
-          <li class="advantages__item">
-            <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-          </li>
-        </ul>
-      </section>
-    </div>
+    <section class="main-container__advantages advantages">
+      <h2 class="advantages__title">Как это работает</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+          </p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+        </li>
+      </ul>
+    </section>
 
-    <div class="wrapper-example">
-      <section class="wrapper-example__example example">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16 часов в день. </p>
-        <dl class="example__params">
-          <div class="example__param">
-            <dt class="example__key">Снижение<br>веса</dt>
-            <dd class="example__value">5 кг</dd>
-          </div>
-          <div class="example__param">
-            <dt class="example__key">Затрачено<br>времени</dt>
-            <dd class="example__value">60 дней</dd>
-          </div>
-          <div class="example__param-string">
-            <dt class="example__param-text">Затраты на питание:</dt>
-            <dd class="example__param-text">15 000 руб.</dd>
-          </div>
-        </dl>
-        <div class="comparator">
-          <img class="comparator__image" src="./img/fat-cat.png" alt="Толстый котик" width="280" height="256">
+    <section class="main-container__example example">
+      <h2 class="example__title">Живой пример</h2>
+      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+        Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
+        16 часов в день. </p>
+      <dl class="example__params">
+        <div class="example__param">
+          <dt class="example__key">Снижение<br>веса</dt>
+          <dd class="example__value">5 кг</dd>
         </div>
-      </section>
-    </div>
+        <div class="example__param">
+          <dt class="example__key">Затрачено<br>времени</dt>
+          <dd class="example__value">60 дней</dd>
+        </div>
+        <div class="example__param-string">
+          <dt class="example__param-text">Затраты на питание:</dt>
+          <dd class="example__param-text">15 000 руб.</dd>
+        </div>
+      </dl>
+      <div class="comparator">
+        <img class="comparator__image" src="./img/fat-cat.png" alt="Толстый котик" width="280" height="256">
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -170,7 +165,6 @@
     };
   </script>
   <script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js" defer></script>
-
 </body>
 
 </html>
