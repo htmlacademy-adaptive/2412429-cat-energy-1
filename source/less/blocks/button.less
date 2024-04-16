@@ -1,0 +1,23 @@
+.button {
+  display: inline-block;
+  padding: 10px 26px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: @font-primary;
+  text-align: center;
+  color: @color-white;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: @color-primary;
+  border: none;
+  cursor: pointer;
+
+  @media @tablet {
+    padding-block: 14px;
+  }
+
+  &--secondary {
+    color: @basic-color;
+    background-color: #f2f2f2;
+  }
+}

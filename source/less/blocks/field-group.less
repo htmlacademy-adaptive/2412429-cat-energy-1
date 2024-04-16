@@ -1,0 +1,19 @@
+.field-group {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @font-primary;
+  text-transform: uppercase;
+  gap: 14px;
+}
+
+.field-group__field {
+  outline: 1px solid #e7e7e7;
+
+  &--multiline {
+    display: grid;
+    grid-column: 1 / -1;
+  }
+}

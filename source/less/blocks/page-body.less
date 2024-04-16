@@ -1,0 +1,25 @@
+.page-body__firstscreen {
+  position: relative;
+  min-height: 367px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    right: 0;
+    bottom: 178px;
+    left: 0;
+    z-index: -1;
+    background-image: @gradient-green, url("../img/cat-green.png");
+    background-repeat: no-repeat;
+    background-position: 0 0, 50% 100%;
+  }
+}
+
+.page-body__inner {
+  .container();
+}
+
+.page-body__program {
+  .container();
+}
