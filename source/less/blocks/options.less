@@ -1,19 +1,15 @@
 .options {
   display: grid;
   list-style: none;
-  gap: 24px;
+  gap: 10px;
 
-  &--radio {
-    &::before {
-      .mobile-line ();
-    }
+  &--radio::before {
+    .mobile-line();
   }
 
-  &--radio {
-    &::after {
-      .mobile-line ();
-      bottom: 0;
-    }
+  &--radio::after {
+    .mobile-line();
+    bottom: 0;
   }
 }
 

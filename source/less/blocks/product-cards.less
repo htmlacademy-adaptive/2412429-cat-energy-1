@@ -12,12 +12,12 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-top: 21px;
-  padding-bottom: 26px;
+  padding-top: 22px;
+  padding-bottom: 24px;
 
   &--secondary {
-    display: block;
-    padding-top: 27px;
+    grid-template-columns: 1fr;
+    padding-top: 65px;
     text-align: center;
   }
 
@@ -37,8 +37,7 @@
 }
 
 .product-cards__title {
-  margin: 0;
-  padding-bottom: 16px;
+  margin: 0 0 15px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -46,7 +45,8 @@
   text-transform: uppercase;
 
   &--secondary {
-    padding-top: 18px;
+    margin: 0;
+    padding-top: 14px;
     padding-bottom: 10px;
   }
 }
@@ -55,41 +55,29 @@
   display: grid;
   grid-column: 1/-1;
   margin: 0;
-  padding-bottom: 21px;
 }
 
 .product-cards__param {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-
-.product-cards__key {
-  display: grid;
-  justify-content: start;
   font-size: 12px;
-  font-family: @font-basic;
-  color: @basic-color;
+  line-height: 16px;
+  gap: 20px;
 }
 
 .product-cards__value {
-  display: grid;
-  justify-content: end;
+  justify-self: end;
   margin: 0;
-  font-size: 12px;
-  font-family: @font-basic;
-  color: @basic-color;
 }
 
 .product-cards__button {
-  display: grid;
   grid-column: 1/-1;
-  padding-block: 10px;
-  text-decoration: none;
+  margin-top: 16px;
 }
 
 .product-cards__text {
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 4px;
   font-size: 12px;
   line-height: 16px;
 }

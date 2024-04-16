@@ -12,7 +12,7 @@
   <div class="page-body__fullscreen">
     <header class="page-header">
       <a class="logo">
-        <img class="logo__image" src="./img/logo2.svg" width="101" height="18" alt="Логотип Кэт энерджи">
+        <img class="logo__image" src="img/logo2.svg" width="101" height="18" alt="Логотип Кэт энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -41,9 +41,9 @@
     </header>
   </div>
 
-  <main class="page-body__inner form-container">
-    <h1 class="form-container__title title">Подбор программы</h1>
-    <p class="form-container__text">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
+  <main class="page-body__inner page-container">
+    <h1 class="page-container__title title">Подбор программы</h1>
+    <p class="page-container__text">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
 
     <form class="form" action="https://echo.htmlacademy.ru/" method="post">
       <fieldset class="form__fieldset">
@@ -121,13 +121,13 @@
           <li class="options__item">
             <label class="toggler">
               <input class="toggler__input" type="checkbox" name="additional" value="milk">
-              молоко
+              питьевая вода
             </label>
           </li>
           <li class="options__item">
             <label class="toggler">
               <input class="toggler__input" type="checkbox" name="additional" value="water">
-              питьевая вода
+              молоко
             </label>
           </li>
           <li class="options__item">
@@ -139,7 +139,7 @@
         </ul>
       </fieldset>
       <div class="form__footer">
-        <button class="button button--small" type="submit">Отправить заявку</button>
+        <button class="button" type="submit">Отправить заявку</button>
         <p class="form__text">* — Обязательные поля</p>
       </div>
     </form>
@@ -151,32 +151,30 @@
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
     </section>
     <div class="footer__map map">
-      <img class="map__image" src="./img/map.png" width="320" height="362" alt="Картинка карты">
+      <img class="map__image" src="img/map.png" width="320" height="362" alt="Картинка карты">
     </div>
     <div class="footer__logo-wrapper">
       <a class="logo">
-        <img class="logo__image" src="./img/logo2.svg" width="128" height="24" alt="Логотип Кэт энерджи">
+        <img class="logo__image" src="img/logo2.svg" width="128" height="24" alt="Логотип Кэт энерджи">
       </a>
     </div>
-    <div class="wrapper-social-links">
-      <ul class="wrapper-social-links__social-links social-links">
-        <li class="social-links__item">
-          <a class="social-links__link" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Вконтакте.</span>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a class="social-links__link" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Ютуб.</span>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a class="social-links__link" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Телеграмм.</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ul class="social-links footer__social-links">
+      <li class="social-links__item">
+        <a class="social-links__link" href="https://vk.com/htmlacademy">
+          <span class="visually-hidden">Вконтакте.</span>
+        </a>
+      </li>
+      <li class="social-links__item">
+        <a class="social-links__link" href="https://www.youtube.com/user/htmlacademyru">
+          <span class="visually-hidden">Ютуб.</span>
+        </a>
+      </li>
+      <li class="social-links__item">
+        <a class="social-links__link" href="https://t.me/htmlacademy">
+          <span class="visually-hidden">Телеграмм.</span>
+        </a>
+      </li>
+    </ul>
     <div class="logo-htmlacademy">
       <p class="logo-htmlacademy__text">HTML Academy</p>
       <a class="logo-htmlacademy__logo" href="https://htmlacademy.ru"></a>
@@ -189,7 +187,6 @@
     };
   </script>
   <script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js" defer></script>
-
 </body>
 
 </html>

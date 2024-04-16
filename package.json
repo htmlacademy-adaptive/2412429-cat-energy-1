@@ -37,6 +37,5 @@
     "source/img/**/*.svg",
     "source/less/**/*.less"
   ],
-
   "type": "module"
 }
