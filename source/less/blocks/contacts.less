@@ -1,6 +1,11 @@
 .contacts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media @tablet-desktop {
+    grid-template-columns: repeat(2, 163px);
+    gap: 20px;
+  }
 }
 
 .contacts__text {
@@ -10,9 +15,20 @@
   line-height: 20px;
   font-family: @font-primary;
   text-transform: uppercase;
+
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {
   margin: 0;
   line-height: 20px;
+
+  @media @tablet-desktop {
+    margin-left: auto;
+    font-size: 16px;
+    text-align: end;
+  }
 }

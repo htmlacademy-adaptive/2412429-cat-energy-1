@@ -6,6 +6,11 @@
   position: relative;
   padding-left: 20px;
   background: @color-fourth;
+
+  @media @tablet-desktop {
+    padding-left: 52px;
+    color: @color-tertiary;
+  }
 }
 
 .programs__title {
@@ -30,28 +35,83 @@
     background: @color-primary;
     border-radius: 50%;
   }
+
+  @media @tablet-desktop {
+    padding-top: 77px;
+    padding-bottom: 24px;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 92px;
+      left: 445px;
+      width: 200px;
+      min-height: 200px;
+    }
+  }
+
+  @media @desktop {
+    padding-bottom: 73px;
+    padding-left: 162px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      min-height: 100px;
+    }
+  }
 }
 
 .programs__description {
-  max-width: 241px;
   margin: 0;
   padding-bottom: 21px;
   font-size: 14px;
   line-height: 18px;
   color: @basic-color;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid @color-lightergray;
+
+  @media @tablet-desktop {
+    margin-bottom: 53px;
+    padding: 0;
+    padding-right: 314px;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
+
+  @media @desktop {
+    margin-bottom: 0;
+    padding-right: 61px;
+    padding-bottom: 30px;
+  }
 }
 
 .programs__link-wrapper {
   padding-block: 20px;
+
+  @media @tablet-desktop {
+    margin-bottom: 57px;
+    padding: 0;
+  }
 }
 
 .programs__link {
   margin: 0;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   font-family: @font-primary;
   color: @color-tertiary;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 29.64px;
+  }
 }

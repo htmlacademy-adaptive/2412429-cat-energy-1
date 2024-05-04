@@ -7,12 +7,17 @@
   font-family: @font-primary;
   text-transform: uppercase;
   gap: 14px;
+
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 29.64px;
+    gap: 13px;
+  }
 }
 
 .field-group__field {
-  outline: 1px solid #e7e7e7;
-
   &--multiline {
     grid-column: 1 / -1;
+    margin-bottom: -4px;
   }
 }

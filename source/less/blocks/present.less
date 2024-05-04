@@ -1,11 +1,20 @@
 .present {
   position: relative;
-  min-height: 290px;
   padding: 186px 50px 44px;
   color: @color-white;
   background-image: @gradient-green, url("../img/cat-green-2.png");
   background-repeat: no-repeat;
   background-position: 0 0, 50% 100%;
+
+  @media @tablet {
+    padding: 70px 125px 70px calc(100% - 286px);
+    background-image: @gradient-green, url("../img/cat-green-2-tablet.png");
+  }
+
+  @media @desktop {
+    padding: 206px 40px 44px;
+    background-position: 0 21px, 97% 100%;
+  }
 }
 
 .present__text {
@@ -13,4 +22,8 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+
+  @media @tablet {
+    text-align: start;
+  }
 }

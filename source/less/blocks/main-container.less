@@ -1,6 +1,10 @@
 .main-container {
   display: grid;
   gap: 20px;
+
+  @media @tablet {
+    gap: 18px;
+  }
 }
 
 .main-container__title {
@@ -14,18 +18,41 @@
   .container();
   display: grid;
   min-width: 280px;
-  margin-top: 20px;
+  margin-top: 23px;
   margin-bottom: 0;
   padding: 0;
   gap: 20px;
+
+  @media @tablet {
+    min-width: 708px;
+    margin-top: 0;
+    gap: 29px;
+  }
+
+  @media @desktop {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+  }
 }
 
 .main-container__advantages {
   .container();
   padding-bottom: 29px;
+
+  @media @tablet-desktop {
+    margin-left: 0;
+  }
+
+  @media @desktop {
+    margin-left: 80px;
+  }
 }
 
 .main-container__example {
-  .container();
   padding-top: 25px;
+
+  @media @desktop {
+    padding-top: 0;
+  }
 }

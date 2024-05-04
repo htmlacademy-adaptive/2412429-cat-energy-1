@@ -41,64 +41,68 @@
     </header>
   </div>
 
-  <main class="page-body__inner page-container">
+  <main class="page-body__inner page-body__inner--narrow page-container">
     <h1 class="page-container__title title">Подбор программы</h1>
     <p class="page-container__text">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
 
     <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="form__fieldset">
-        <legend class="visually-hidden">Заполните данные своего котика</legend>
-        <p class="form__field-group field-group">
-          <label for="name">Имя:*</label>
-          <input class="field-group__field field" type="text" id="name" name="name" placeholder="Барсик" required>
-        </p>
-        <p class="form__field-group field-group">
-          <label for="weight">Вес (кг):*</label>
-          <input class="field-group__field field" type="text" id="weight" name="weight" placeholder="7" required>
-        </p>
-        <p class="form__field-group field-group">
-          <label for="age">Возраст (лет):</label>
-          <input class="field-group__field field" type="text" id="age" name="age" placeholder="7">
-        </p>
-      </fieldset>
+      <div class="form__container">
+        <fieldset class="form__fieldset">
+          <legend class="visually-hidden">Заполните данные своего котика</legend>
+          <p class="form__field-group field-group">
+            <label for="name">Имя:*</label>
+            <input class="field-group__field field" type="text" id="name" name="name" value="Барсик" required>
+          </p>
+          <p class="form__field-group field-group">
+            <label for="weight">Вес (кг):*</label>
+            <input class="field-group__field field" type="text" id="weight" name="weight" value="7" required>
+          </p>
+          <p class="form__field-group field-group">
+            <label for="age">Возраст (лет):</label>
+            <input class="field-group__field field" type="text" id="age" name="age" value="7">
+          </p>
+        </fieldset>
 
-      <fieldset class="form__fieldset">
-        <legend class="visually-hidden">Выбор программы</legend>
-        <ul class="form__options options options--radio">
-          <li class="options__item options__item--radio">
-            <label class="toggler">
-              <input class="toggler__input" type="radio" name="program" value="weight_loss">
-              Похудение
-            </label>
-          </li>
-          <li class="options__item options__item--radio">
-            <label class="toggler">
-              <input class="toggler__input" type="radio" name="program" value="weight_gain">
-              Набор массы
-            </label>
-          </li>
-          <li class="options__item options__item--radio">
-            <label class="toggler">
-              <input class="toggler__input" type="radio" name="program" value="need_advice">
-              Не знаю (Нужен ваш совет)
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="visually-hidden">Выбор программы</legend>
+          <ul class="form__options options">
+            <li class="options__item">
+              <label class="toggler">
+                <input class="toggler__input" type="radio" name="program" value="weight_loss">
+                Похудение
+              </label>
+            </li>
+            <li class="options__item">
+              <label class="toggler">
+                <input class="toggler__input" type="radio" name="program" value="weight_gain">
+                Набор массы
+              </label>
+            </li>
+            <li class="options__item">
+              <label class="toggler">
+                <input class="toggler__input" type="radio" name="program" value="need_advice">
+                Не знаю (Нужен ваш совет)
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
 
       <fieldset class="form__fieldset">
         <legend class="form__title">Контактные данные (владельца кота)</legend>
-        <p class="form__field-group field-group">
-          <label for="mail">E-mail:*</label>
-          <input class="field-group__field field" type="email" id="mail" name="mail" placeholder="кuklachev@gmail.com"
-            required>
-        </p>
-        <p class="form__field-group field-group">
-          <label for="phone">Телефон:*</label>
-          <input class="field-group__field field" type="number" id="phone" name="phone" placeholder="8 (960) 900-60-90"
-            required>
-        </p>
+        <div class="form__container">
+          <p class="form__field-group field-group">
+            <label for="mail">E-mail:*</label>
+            <input class="field-group__field field" type="email" id="mail" name="mail" placeholder="кuklachev@gmail.com"
+              required>
+          </p>
+          <p class="form__field-group field-group">
+            <label for="phone">Телефон:*</label>
+            <input class="field-group__field field" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90"
+              required>
+          </p>
       </fieldset>
+      </div>
 
       <fieldset class="form__fieldset">
         <legend class="form__title">Комментарий</legend>
@@ -111,7 +115,7 @@
 
       <fieldset class="form__fieldset">
         <legend class="form__title">Дополнительно</legend>
-        <ul class="form__options form__options--checkbox options">
+        <ul class="form__options form__options--checkbox options options--checkbox">
           <li class="options__item">
             <label class="toggler">
               <input class="toggler__input" type="checkbox" name="additional" value="sweetener" checked>

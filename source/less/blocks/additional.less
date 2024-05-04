@@ -7,9 +7,35 @@
   line-height: 24px;
   font-family: @font-primary;
   color: @color-tertiary;
+
+  @media @tablet-desktop {
+    margin-top: 70px;
+    margin-bottom: 80px;
+    margin-left: 40px;
+    padding: 0;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  @media @desktop {
+    margin-top: 76px;
+    margin-bottom: 70px;
+    margin-left: 0;
+    padding: 0;
+  }
 }
 
 .additional__additional-cards {
   margin: 0;
   padding: 0;
+
+  @media @tablet-desktop {
+    border: 1px solid @color-gray;
+    padding-inline: 37px;
+  }
+
+  @media @desktop {
+    padding: 0;
+    border: none;
+  }
 }

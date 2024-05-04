@@ -1,19 +1,18 @@
 .options {
   display: grid;
   list-style: none;
-  gap: 11px;
+  gap: 13px;
 
-  &--radio::before {
-    .mobile-line();
+  @media @tablet-desktop {
+    &--checkbox {
+      gap: 32px 62px;
+      margin-top: -17px;
+    }
   }
 
-  &--radio::after {
-    .mobile-line();
-    bottom: 0;
+  @media @desktop {
+    &--checkbox {
+      gap: 82px;
+    }
   }
-}
-
-.options__item {
-  display: grid;
-  gap: 10px;
 }

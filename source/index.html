@@ -14,7 +14,7 @@
       <a class="logo">
         <img class="logo__image" src="img/logo2.svg" width="101" height="18" alt="Логотип Кэт энерджи">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -41,11 +41,17 @@
     </header>
 
     <section class="page-body__program program">
-      <h1 class="program__title title">Функциональное питание для котов</h1>
-      <p class="program__text">Занялся собой? Займись котом!</p>
-      <img class="program__image" src="img/content-picture.png" width="280" height="270"
-        alt="Картинка банки с кормом">
-      <button class="button" type="button">Подобрать программу</button>
+      <div class="program__wrapper">
+        <h1 class="program__title title">Функциональное питание для котов</h1>
+        <p class="program__text">Занялся собой? Займись котом!</p>
+        <button class="program__button button" type="button">Подобрать программу</button>
+      </div>
+      <picture>
+        <source media="(min-width:1280px)" srcset="img/content-picture-desktop.png" width="552" height="499">
+        <source media="(min-width:768px)" srcset="img/content-picture-tablet.png" width="709" height="609">
+        <img class="program__image" src="img/content-picture.png" width="280" height="270" loading="lazy"
+          alt="Картинка банки с кормом">
+      </picture>
     </section>
   </div>
 
@@ -98,25 +104,30 @@
 
     <section class="main-container__example example">
       <h2 class="example__title">Живой пример</h2>
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-        Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-        16 часов в день. </p>
-      <dl class="example__params">
-        <div class="example__param">
-          <dt class="example__key">Снижение<br>веса</dt>
-          <dd class="example__value">5 кг</dd>
+      <div class="example__wrapper">
+        <div class="wrapper-params">
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+            по
+            16 часов в день. </p>
+          <dl class="example__params">
+            <div class="example__param">
+              <dt class="example__key">Снижение веса</dt>
+              <dd class="example__value">5 кг</dd>
+            </div>
+            <div class="example__param">
+              <dt class="example__key">Затрачено времени</dt>
+              <dd class="example__value">60 дней</dd>
+            </div>
+            <div class="example__param-string">
+              <dt class="example__param-text">Затраты на питание:</dt>
+              <dd class="example__param-text">15 000 руб.</dd>
+            </div>
+          </dl>
         </div>
-        <div class="example__param">
-          <dt class="example__key">Затрачено<br>времени</dt>
-          <dd class="example__value">60 дней</dd>
+        <div class="comparator">
+          <img class="comparator__image" src="img/fat-cat.png" alt="Толстый котик" width="280" height="256">
         </div>
-        <div class="example__param-string">
-          <dt class="example__param-text">Затраты на питание:</dt>
-          <dd class="example__param-text">15 000 руб.</dd>
-        </div>
-      </dl>
-      <div class="comparator">
-        <img class="comparator__image" src="img/fat-cat.png" alt="Толстый котик" width="280" height="256">
       </div>
     </section>
   </main>

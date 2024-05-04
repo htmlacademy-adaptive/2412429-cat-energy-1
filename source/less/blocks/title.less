@@ -1,7 +1,11 @@
 .title {
   font-weight: 400;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   font-family: @font-primary;
   color: var(--title-color, @color-tertiary);
+
+  @media @tablet-desktop {
+    font-size: 60px;
+  }
 }

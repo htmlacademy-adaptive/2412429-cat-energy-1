@@ -12,6 +12,59 @@
   &:last-child {
     border-bottom: 1px solid @color-gray;
   }
+
+  @media @tablet-desktop {
+    position: relative;
+    padding-top: 26px;
+    padding-bottom: 28px;
+    border: none;
+    gap: 25px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -38px;
+      left: -37px;
+      height: 1px;
+      background-color: @color-gray;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media @desktop {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 161fr 116fr 24fr 244px;
+    padding-bottom: 6px;
+    gap: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background-color: @color-gray;
+    }
+  }
+}
+
+.additional-cards__wrapper {
+  display: contents;
+
+  @media @tablet-desktop {
+    display: grid;
+    grid-template-columns: 163px 171fr 39fr;
+    gap: 10px;
+  }
+
+  @media @desktop {
+    display: contents;
+  }
 }
 
 .additional-cards__title {
@@ -22,11 +75,29 @@
   font-family: @font-primary;
   color: #222222;
   text-transform: uppercase;
+
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media @desktop {
+    display: grid;
+    align-items: center;
+  }
 }
 
 .additional-cards__params {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media @tablet-desktop {
+    display: contents;
+  }
+
+  @media @desktop {
+    display: contents;
+  }
 }
 
 .additional-cards__values {
@@ -37,5 +108,25 @@
 
   &--secondary {
     text-align: right;
+  }
+
+  @media @tablet-desktop {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media @desktop {
+    &--secondary {
+      text-align: start;
+    }
+  }
+}
+
+.additional-cards__button {
+  @media @tablet-desktop {
+    padding-block: 10px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }

@@ -1,6 +1,21 @@
+.toggler {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @media @tablet-desktop {
+    gap: 19px;
+  }
+}
+
 .toggler__input {
   width: 30px;
   height: 30px;
   margin: 0;
   appearance: none;
+
+  @media @tablet-desktop {
+    width: 40px;
+    height: 40px;
+  }
 }

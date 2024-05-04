@@ -1,5 +1,31 @@
 .comparator {
   padding-top: 19px;
   padding-bottom: 37px;
+  padding-inline: 20px;
   background: @color-fourth;
+
+  @media @tablet {
+    padding-bottom: 98px;
+    background: transparent;
+    background-image: linear-gradient(transparent 151px, @color-fourth 111px);
+  }
+
+  @media @desktop {
+    background: transparent;
+  }
 }
+
+.comparator__image {
+  @media @tablet {
+    width: 560px;
+    height: 512px;
+    margin-top: -19px;
+    padding-left: 104px;
+  }
+
+  @media @desktop {
+    width: 560px;
+    height: 512px;
+  }
+}
+

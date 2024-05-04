@@ -4,22 +4,90 @@
   text-align: center;
   color: @color-white;
   --title-color: currentColor;
+
+  @media @tablet-desktop {
+    position: relative;
+    color: @color-tertiary;
+  }
+
+  @media @desktop {
+    display: grid;
+    margin-bottom: 111px;
+  }
+}
+
+.program__wrapper {
+  display: contents;
+
+  @media @tablet-desktop {
+    display: grid;
+    max-width: 416px;
+    text-align: start;
+    padding-inline: 91px;
+    gap: 16px;
+  }
+
+  @media @desktop {
+    padding-inline: 81px;
+  }
+
+  @media @desktop {
+    display: grid;
+  }
 }
 
 .program__title {
   margin: 0;
+  margin-top: 10px;
+
+  @media @tablet-desktop {
+    margin-top: 33px;
+  }
 }
 
 .program__text {
   margin: 0;
   padding-top: 25px;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
   font-family: @font-primary;
   text-transform: uppercase;
+
+  @media @tablet-desktop {
+    padding-bottom: 33px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media @desktop {
+    padding-bottom: 35px;
+  }
 }
 
 .program__image {
-  margin-top: 28px;
-  margin-bottom: 3px;
+  order: 3;
+  margin-top: 29px;
+
+  @media @tablet-desktop {
+    position: relative;
+    z-index: -1;
+    margin-top: -83px;
+    margin-bottom: 0;
+    margin-left: 1px;
+  }
+
+  @media @desktop {
+    left: 448px;
+    margin-top: -367px;
+    margin-left: 0;
+  }
+}
+
+.program__button {
+  order: 99;
+
+  @media @tablet-desktop {
+    order: 0;
+    width: 244px;
+  }
 }

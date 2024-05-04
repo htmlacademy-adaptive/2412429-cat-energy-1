@@ -1,5 +1,17 @@
 .page-header {
   .container();
   padding-top: 27px;
-  padding-bottom: 18px;
+  padding-bottom: 17px;
+
+  @media @tablet-desktop {
+    display: grid;
+    grid-template-columns: 174px 1fr;
+    padding-top: 39px;
+    padding-right: 34px;
+  }
+
+  @media @desktop {
+    padding-top: 74px;
+    padding-bottom: 65px;
+  }
 }

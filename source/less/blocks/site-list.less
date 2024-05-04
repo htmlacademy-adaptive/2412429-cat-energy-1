@@ -1,0 +1,21 @@
+.site-list {
+  list-style-type: none;
+
+  @media @tablet-desktop {
+    padding: 0;
+  }
+}
+
+.site-list__item {
+  &--active {
+    padding-bottom: 8px;
+    border-bottom: 2px solid @color-primary;
+  }
+
+  @media @desktop {
+    &--active {
+      padding-bottom: 3px;
+      border-bottom: 2px solid @color-white;
+    }
+  }
+}

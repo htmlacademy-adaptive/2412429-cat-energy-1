@@ -1,3 +1,46 @@
 .main-nav {
   display: none;
+  list-style-type: none;
+  font-size: 20px;
+  line-height: 1;
+  color: @color-tertiary;
+  text-transform: uppercase;
+  background-color: @color-white;
+
+  @media @tablet-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: @font-primary;
+  }
+
+  @media @desktop {
+    font-size: 20px;
+    line-height: 29.64px;
+    color: @color-tertiary;
+    background: transparent;
+  }
+}
+
+.main-nav__list {
+  @media @tablet-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 34px;
+  }
+
+  @media @desktop {
+    gap: 33px;
+  }
+}
+
+.main-nav__toggle {
+  @media @tablet-desktop {
+    display: none;
+  }
 }

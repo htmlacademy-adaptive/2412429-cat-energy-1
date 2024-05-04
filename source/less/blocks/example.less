@@ -1,8 +1,24 @@
 .example {
   background: @color-fourth;
+
+  @media @tablet {
+    background: @color-white;
+  }
+
+  @media @desktop {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      min-height: 462px;
+      background: @color-number-gray;
+    }
+  }
 }
 
 .example__title {
+  .container();
   margin: 0;
   padding-bottom: 41px;
   font-weight: 400;
@@ -10,14 +26,69 @@
   line-height: 40px;
   font-family: @font-primary;
   color: @color-tertiary;
+
+  @media @tablet-desktop {
+    margin-bottom: 60px;
+    padding-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+
+    @media @desktop {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 146px;
+      padding-left: 110px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: @color-white;
+      }
+    }
+  }
+}
+
+.example__wrapper {
+  display: contents;
+
+  @media @tablet {
+    display: contents;
+  }
+
+  @media @desktop {
+    position: relative;
+    display: grid;
+    grid-template-columns: 477px 1fr;
+    background: transparent;
+    margin-inline: 80px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      min-height: 462px;
+      background: @color-number-gray;
+    }
+  }
 }
 
 .example__description {
+  .container();
   margin: 0;
   line-height: 18px;
+
+  @media @tablet-desktop {
+    margin-bottom: 38px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media @desktop {
+    max-width: 432px;
+  }
 }
 
 .example__params {
+  .container();
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0;
@@ -25,10 +96,27 @@
   text-align: center;
   column-gap: 30px;
   row-gap: 18px;
+
+  @media @tablet {
+    grid-template-columns: 162px 162px 1fr;
+    gap: 43px;
+    padding-bottom: 99px;
+  }
 }
 
 .example__param-string {
-  grid-column: 1/-1;
+  @media @mobile {
+    grid-column: 1/-1;
+  }
+  text-align: center;
+
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    text-align: end;
+    gap: 9px;
+  }
 }
 
 .example__param {
@@ -41,6 +129,11 @@
   margin: 0;
   font-family: @font-primary;
   text-transform: uppercase;
+
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .example__value {
@@ -51,10 +144,16 @@
   font-family: @font-primary;
   text-transform: uppercase;
   border: 1px solid #dcdcdc;
+
+  @media @tablet-desktop {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__key {
   position: relative;
+  max-width: 70px;
   margin: auto;
   margin-top: -8px;
   font-size: 12px;
@@ -63,4 +162,12 @@
   text-transform: lowercase;
   background-color: #eaeaea;
   padding-inline: 16px;
+
+  @media @tablet-desktop {
+    max-width: max-content;
+    font-size: 14px;
+    line-height: 1;
+    background: @color-white;
+    padding-inline: 10px;
+  }
 }
