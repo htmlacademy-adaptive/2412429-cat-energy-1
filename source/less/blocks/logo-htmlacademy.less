@@ -1,0 +1,39 @@
+.logo-htmlacademy {
+  position: relative;
+  display: flex;
+}
+
+.logo-htmlacademy__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  fill: #666666;
+
+  @media @tablet-desktop {
+    position: static;
+  }
+}
+
+.logo-htmlacademy__link {
+  display: flex;
+  align-items: center;
+  align-self: start;
+  min-height: 34px;
+  font-size: 16px;
+  line-height: 20px;
+  color: inherit;
+  text-decoration: none;
+  gap: 20px;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    .logo-htmlacademy__image {
+      fill: @color-primary;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

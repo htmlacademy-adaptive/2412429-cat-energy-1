@@ -1,25 +1,20 @@
 .advantages {
   display: grid;
-  gap: 20px;
+  gap: 40px;
+  padding-bottom: 29px;
 
-  @media @tablet {
-    position: relative;
+  @media @tablet-desktop {
+    padding-top: 25px;
+    border-bottom: 1px solid @color-line-wrapper;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: -75px;
-      bottom: 2px;
-      left: -20px;
-      height: 1px;
-      background-color: @color-line-wrapper;
-    }
+  @media @desktop {
+    padding-top: 50px;
   }
 }
 
 .advantages__title {
   margin: 0;
-  padding-bottom: 20px;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -27,16 +22,13 @@
   color: @color-tertiary;
 
   @media @tablet-desktop {
-    margin-top: 26px;
-    margin-bottom: 33px;
-    padding: 0;
+    margin-bottom: 13px;
     font-size: 60px;
     line-height: 1;
   }
 
   @media @desktop {
-    margin-top: 51px;
-    margin-bottom: 32px;
+    margin-bottom: 13px;
   }
 }
 
@@ -50,13 +42,15 @@
   @media @tablet-desktop {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-right: 76px;
     counter-reset: advantages;
     gap: 37px 135px;
   }
 
   @media @desktop {
     grid-template-columns: repeat(4, 1fr);
-    gap: 79px;
+    gap: 80px;
+    margin-right: 0;
   }
 }
 
@@ -66,19 +60,8 @@
   margin: 0;
   padding-left: 80px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    min-height: 60px;
-    background: @color-primary;
-  }
-
   @media @tablet-desktop {
-    max-width: 249px;
-    padding-top: 128px;
+    padding-top: 131px;
     padding-bottom: 77px;
     padding-left: 0;
     counter-increment: advantages;
@@ -93,15 +76,25 @@
       font-size: 280px;
       line-height: 280px;
       font-family: @font-primary;
-      color: @color-number-gray;
+      color: @color-white-gray;
     }
 
     &:first-child::after {
       right: -5px;
     }
+  }
 
-    &::before {
-      top: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 60px;
+    min-height: 60px;
+    background: @color-primary;
+
+    @media @tablet-desktop {
+      top: 21px;
       width: 80px;
       min-height: 80px;
     }
@@ -110,12 +103,9 @@
 
 .advantages__description {
   margin: 0;
-  padding-top: 3px;
   line-height: 18px;
 
-
   @media @tablet-desktop {
-    font-size: 16px;
     line-height: 24px;
   }
 }

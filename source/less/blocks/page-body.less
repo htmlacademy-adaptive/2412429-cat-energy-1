@@ -1,38 +1,43 @@
+.page-body {
+  picture,
+  source {
+    display: contents;
+  }
+}
+
 .page-body__firstscreen {
   position: relative;
   min-height: 367px;
+
+  @media @desktop {
+    --nav-color: @color-white;
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: 65px;
     right: 0;
-    bottom: 175px;
+    bottom: 198px;
     left: 0;
     z-index: -1;
     background-image: @gradient-green, url("../img/cat-green.png");
     background-repeat: no-repeat;
-    background-position: 0 0, 50% 100%;
-  }
+    background-position: 50% 100%;
 
-  @media @tablet-desktop {
-    &::before {
+    @media @tablet {
       content: none;
     }
+  }
 
-    @media @desktop {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: -52px;
-        left: 720px;
-        z-index: -1;
-        background-image: @gradient-green, url("../img/cat-green-desktop.png");
-        background-repeat: no-repeat;
-        background-position: 0 0, 50% 100%;
-      }
+  @media @desktop {
+    &::before {
+      top: 0;
+      bottom: -52px;
+      left: 50%;
+      background-color: #48474c;
+      background-image: @gradient-green, url("../img/cat-green-desktop.png");
+      background-position: 100% 100%;
     }
   }
 }
@@ -45,16 +50,12 @@
       padding-inline: 70px;
     }
   }
-
-  @media @desktop {
-    padding-inline: 110px;
-  }
 }
 
 .page-body__program {
   .container();
 
-  @media @tablet-desktop {
-    padding-left: 29px;
+  @media @desktop {
+    margin-bottom: 134px;
   }
 }

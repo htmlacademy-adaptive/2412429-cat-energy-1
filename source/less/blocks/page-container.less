@@ -4,12 +4,12 @@
   border-top: 1px solid @color-gray;
 
   @media @tablet-desktop {
-    padding-top: 28px;
+    padding-top: 40px;
     border: none;
   }
 
   @media @desktop {
-    padding-top: 17px;
+    padding-top: 19px;
   }
 }
 
@@ -17,11 +17,7 @@
   margin: 0 0 40px;
 
   @media @tablet-desktop {
-    margin: 32px 0 55px;
-  }
-
-  @media @desktop {
-    margin: 2px 0 55px;
+    margin-bottom: 55px;
   }
 }
 
@@ -35,7 +31,7 @@
   @media @tablet-desktop {
     max-width: 323px;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
   }
 }
 
@@ -50,30 +46,4 @@
 
 .page-container__product-cards {
   margin: 0;
-  padding: 0;
-
-  @media @tablet-desktop {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 31px 60px;
-  }
-
-  @media @desktop {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 34px 80px;
-  }
-}
-
-.page-container__present {
-  margin-block: 35px;
-
-  @media @tablet {
-    margin: 0;
-    margin-top: 68px;
-  }
-
-  @media @desktop {
-    margin: 0;
-    margin-top: 171px;
-  }
 }

@@ -3,7 +3,7 @@
   list-style-type: none;
   font-size: 20px;
   line-height: 1;
-  color: @color-tertiary;
+  color: var(--nav-color, @color-tertiary);
   text-transform: uppercase;
   background-color: @color-white;
 
@@ -16,27 +16,17 @@
     font-size: 18px;
     line-height: 24px;
     font-family: @font-primary;
+    background-color: transparent;
   }
 
   @media @desktop {
     font-size: 20px;
-    line-height: 29.64px;
-    color: @color-tertiary;
-    background: transparent;
+    line-height: 1.5;
   }
 }
 
 .main-nav__list {
-  @media @tablet-desktop {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    gap: 34px;
-  }
-
-  @media @desktop {
-    gap: 33px;
-  }
+  margin: 0;
 }
 
 .main-nav__toggle {

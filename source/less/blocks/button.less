@@ -12,14 +12,16 @@
   border: none;
   cursor: pointer;
 
-  @media @tablet-desktop {
-    padding: 14px 26px;
-    font-size: 20px;
-    line-height: 26px;
+  &:not(&--small) {
+    @media @tablet-desktop {
+      padding: 14px 26px;
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   &--secondary {
     color: @basic-color;
-    background-color: #f2f2f2;
+    background-color: @color-white-gray;
   }
 }

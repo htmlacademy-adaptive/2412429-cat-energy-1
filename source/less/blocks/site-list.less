@@ -1,21 +1,34 @@
 .site-list {
+  padding: 0;
   list-style-type: none;
 
   @media @tablet-desktop {
-    padding: 0;
-  }
-}
-
-.site-list__item {
-  &--active {
-    padding-bottom: 8px;
-    border-bottom: 2px solid @color-primary;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
   }
 
   @media @desktop {
-    &--active {
-      padding-bottom: 3px;
-      border-bottom: 2px solid @color-white;
+    gap: 33px;
+  }
+}
+
+.site-list__link {
+  display: block;
+  padding: 23px;
+
+  @media @tablet-desktop {
+    padding: 9px 0 7px;
+    border-bottom: 2px solid transparent;
+  }
+
+  @media @desktop {
+    padding: 8px 0 6px;
+  }
+
+  &--active {
+    @media @tablet-desktop {
+      border-color: var(--nav-color, @color-primary);
     }
   }
 }

@@ -1,5 +1,17 @@
 .additional-cards {
+  padding: 0;
   list-style-type: none;
+  border-bottom: 1px solid @color-gray;
+
+  @media @tablet-desktop {
+    border-right: 1px solid @color-gray;
+    border-left: 1px solid @color-gray;
+  }
+
+  @media @desktop {
+    border-right: none;
+    border-left: none;
+  }
 }
 
 .additional-cards__item {
@@ -9,61 +21,17 @@
   gap: 13px;
   border-top: 1px solid @color-gray;
 
-  &:last-child {
-    border-bottom: 1px solid @color-gray;
-  }
-
   @media @tablet-desktop {
-    position: relative;
-    padding-top: 26px;
-    padding-bottom: 28px;
-    border: none;
-    gap: 25px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: -38px;
-      left: -37px;
-      height: 1px;
-      background-color: @color-gray;
-    }
-
-    &:last-child {
-      border-bottom: none;
-    }
+    grid-template-columns: 163px 171fr 39fr;
+    padding: 26px 37px 28px;
+    gap: 24px 10px;
   }
 
   @media @desktop {
-    display: grid;
     align-items: center;
     grid-template-columns: 161fr 116fr 24fr 244px;
-    padding-bottom: 6px;
+    padding: 15px 0 16px;
     gap: 40px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 9px;
-      right: 0;
-      left: 0;
-      height: 1px;
-      background-color: @color-gray;
-    }
-  }
-}
-
-.additional-cards__wrapper {
-  display: contents;
-
-  @media @tablet-desktop {
-    display: grid;
-    grid-template-columns: 163px 171fr 39fr;
-    gap: 10px;
-  }
-
-  @media @desktop {
-    display: contents;
   }
 }
 
@@ -71,14 +39,13 @@
   margin: 0;
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   font-family: @font-primary;
-  color: #222222;
+  color: @color-black-light;
   text-transform: uppercase;
 
   @media @tablet-desktop {
     font-size: 20px;
-    line-height: 1;
   }
 
   @media @desktop {
@@ -90,43 +57,40 @@
 .additional-cards__params {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 
   @media @tablet-desktop {
-    display: contents;
-  }
-
-  @media @desktop {
     display: contents;
   }
 }
 
 .additional-cards__values {
   margin: 0;
-  font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
   font-family: @font-basic;
 
-  &--secondary {
-    text-align: right;
-  }
-
   @media @tablet-desktop {
-    font-size: 16px;
     line-height: 20px;
     text-align: end;
   }
 
   @media @desktop {
-    &--secondary {
+    text-align: start;
+  }
+
+  &--secondary {
+    text-align: end;
+
+    @media @desktop {
       text-align: start;
     }
   }
 }
 
 .additional-cards__button {
-  @media @tablet-desktop {
-    padding-block: 10px;
-    font-size: 16px;
-    line-height: 20px;
+  grid-column: 1 / -1;
+
+  @media @desktop {
+    grid-column: span 1;
   }
 }
