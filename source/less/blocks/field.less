@@ -9,23 +9,26 @@
   background-color: @color-white;
   border: 1px solid @color-bordergray;
 
-  &--multiline {
-    min-height: 150px;
-    padding: 14px;
-  }
-
   @media @tablet-desktop {
     min-height: 52px;
     padding: 11px 20px 9px;
+  }
 
-    &--multiline {
+  &--multiline {
+    min-height: 150px;
+
+    @media @mobile {
+      padding: 14px;
+    }
+
+    @media @tablet-desktop {
       min-height: 175px;
       margin-top: 12px;
       margin-bottom: 0;
+    }
 
-      @media @desktop {
-        margin-top: 3px;
-      }
+    @media @desktop {
+      margin-top: 3px;
     }
   }
 }

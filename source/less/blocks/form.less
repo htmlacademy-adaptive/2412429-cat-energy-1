@@ -1,10 +1,4 @@
 .form {
-  margin-bottom: 31px;
-
-  @media @tablet-desktop {
-    margin-bottom: 60px;
-  }
-
   @media @desktop {
     display: grid;
     gap: 66px;
@@ -71,7 +65,7 @@
   @media @tablet-desktop {
     padding: 36px 0;
     font-size: 20px;
-    line-height: 29.64px;
+    line-height: 1.5;
     gap: 20px;
   }
 
@@ -89,14 +83,6 @@
     padding-left: 27px;
     padding-block: 23px;
     border: 1px solid @color-bordergray;
-
-    &--checkbox {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
   }
 
   @media @desktop {
@@ -104,11 +90,19 @@
     padding: 0;
     padding-block: 25px;
     padding-left: 28px;
+  }
 
-    &--checkbox {
+  &--checkbox {
+    @media @tablet-desktop {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0;
       padding: 0;
+      border: none;
+    }
+
+    @media @desktop {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -116,10 +110,10 @@
 .form__footer {
   display: grid;
   margin-top: 40px;
-  gap: 21px;
+  gap: 20px;
 
   @media @tablet-desktop {
-    display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 24px;
     gap: 60px;
@@ -135,11 +129,7 @@
   margin: auto;
 
   @media @tablet-desktop {
-    display: grid;
-    justify-content: start;
-    align-content: space-around;
     margin: 0;
-    font-size: 16px;
     line-height: 1;
   }
 }
