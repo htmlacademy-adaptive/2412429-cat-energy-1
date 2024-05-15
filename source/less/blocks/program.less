@@ -1,9 +1,39 @@
 .program {
   display: grid;
-  padding-top: 17px;
-  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 20px;
   color: @color-white;
   --title-color: currentColor;
+
+  @media @tablet-desktop {
+    position: relative;
+    justify-items: center;
+    padding-top: 39px;
+    padding-bottom: 0;
+    color: @color-tertiary;
+  }
+
+  @media @desktop {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 55px;
+  }
+}
+
+.program__wrapper {
+  display: contents;
+  text-align: center;
+
+  @media @tablet-desktop {
+    display: grid;
+    align-content: start;
+    text-align: start;
+    padding-inline: 90px;
+    gap: 16px;
+  }
+
+  @media @desktop {
+    padding-inline: 80px;
+  }
 }
 
 .program__title {
@@ -14,12 +44,41 @@
   margin: 0;
   padding-top: 25px;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
   font-family: @font-primary;
   text-transform: uppercase;
+
+  @media @tablet-desktop {
+    padding-bottom: 34px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media @desktop {
+    padding-bottom: 35px;
+  }
 }
 
 .program__image {
-  margin-top: 28px;
-  margin-bottom: 3px;
+  order: 3;
+  margin: 30px 0 2px;
+
+  @media @tablet-desktop {
+    position: relative;
+    z-index: -1;
+    margin: -83px 0 0;
+  }
+
+  @media @desktop {
+    margin: -81px 0 0 -384px;
+  }
+}
+
+.program__button {
+  order: 99;
+
+  @media @tablet-desktop {
+    order: 0;
+    width: 244px;
+  }
 }

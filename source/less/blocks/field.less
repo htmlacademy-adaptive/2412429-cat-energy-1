@@ -2,13 +2,33 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 45px;
-  padding: 14px 12px;
+  padding: 11px 15px 8px;
   font: inherit;
+  color: inherit;
   text-transform: uppercase;
   background-color: @color-white;
-  border: none;
+  border: 1px solid @color-bordergray;
+
+  @media @tablet-desktop {
+    min-height: 52px;
+    padding: 11px 20px 9px;
+  }
 
   &--multiline {
     min-height: 150px;
+
+    @media @mobile {
+      padding: 14px;
+    }
+
+    @media @tablet-desktop {
+      min-height: 175px;
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+
+    @media @desktop {
+      margin-top: 3px;
+    }
   }
 }

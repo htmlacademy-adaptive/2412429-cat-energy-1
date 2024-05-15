@@ -1,25 +1,61 @@
+.page-body {
+  picture,
+  source {
+    display: contents;
+  }
+}
+
 .page-body__firstscreen {
   position: relative;
   min-height: 367px;
+
+  @media @desktop {
+    --nav-color: @color-white;
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: 65px;
     right: 0;
-    bottom: 178px;
+    bottom: 198px;
     left: 0;
     z-index: -1;
     background-image: @gradient-green, url("../img/cat-green.png");
     background-repeat: no-repeat;
-    background-position: 0 0, 50% 100%;
+    background-position: 50% 100%;
+
+    @media @tablet {
+      content: none;
+    }
+  }
+
+  @media @desktop {
+    &::before {
+      top: 0;
+      bottom: -52px;
+      left: 50%;
+      background-color: #48474c;
+      background-image: @gradient-green, url("../img/cat-green-desktop.png");
+      background-position: 100% 100%;
+    }
   }
 }
 
 .page-body__inner {
-  .container();
+  .container ();
+
+  &--narrow {
+    @media @tablet {
+      padding-inline: 70px;
+    }
+  }
 }
 
 .page-body__program {
   .container();
+
+  @media @desktop {
+    margin-bottom: 134px;
+  }
 }

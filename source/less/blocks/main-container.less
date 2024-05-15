@@ -1,6 +1,10 @@
 .main-container {
   display: grid;
   gap: 20px;
+
+  @media @tablet {
+    gap: 18px;
+  }
 }
 
 .main-container__title {
@@ -14,18 +18,22 @@
   .container();
   display: grid;
   min-width: 280px;
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 0;
-  padding: 0;
   gap: 20px;
+
+  @media @tablet {
+    min-width: 708px;
+    gap: 29px;
+  }
+
+  @media @desktop {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+  }
 }
 
 .main-container__advantages {
   .container();
-  padding-bottom: 29px;
-}
-
-.main-container__example {
-  .container();
-  padding-top: 25px;
 }

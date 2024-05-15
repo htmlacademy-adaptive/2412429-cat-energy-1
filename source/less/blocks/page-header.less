@@ -1,5 +1,35 @@
 .page-header {
   .container();
-  padding-top: 27px;
-  padding-bottom: 18px;
+  display: grid;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 65px; // убрать когда будет лого с картинкой
+  padding-top: 13px;
+  padding-bottom: 14px;
+
+  @media @tablet-desktop {
+    grid-template-columns: 174px 1fr;
+    min-height: 100px; // убрать когда будет лого с картинкой
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media @desktop {
+    min-height: 169px; // убрать когда будет лого с картинкой
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+.page-header__main-nav {
+  @media @tablet-desktop {
+    margin-top: 2px;
+    margin-right: 4px;
+  }
+
+  @media @desktop {
+    max-width: 50%;
+    margin-right: 0;
+  }
 }

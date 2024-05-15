@@ -1,20 +1,32 @@
 html {
   font-size: 14px;
-  line-height: 18 / 14;
+  line-height: (18 / 14);
   font-family: @font-basic;
+
+  @media @tablet-desktop {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 body {
   min-width: 320px;
   margin: 0;
+  overflow-x: hidden;
   color: #444444;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+picture,
+source {
+  display: contents;
 }

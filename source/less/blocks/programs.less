@@ -4,15 +4,46 @@
 
 .programs__item {
   position: relative;
-  padding-left: 20px;
-  background: @color-fourth;
+  padding: 20px;
+  background: @color-white-gray;
+
+  @media @tablet-desktop {
+    padding: 76px 315px 58px 53px;
+    color: @color-tertiary;
+  }
+
+  @media @desktop {
+    padding-right: 53px;
+  }
+
+  &::before {
+    --size: 50px;
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    width: var(--size);
+    min-height: var(--size);
+    background: @color-primary;
+    border-radius: 50%;
+
+    @media @tablet {
+      --size: 200px;
+      top: 92px;
+      right: 63px;
+      left: auto;
+    }
+
+    @media @desktop {
+      --size: 100px;
+      top: 48px;
+      left: 52px;
+    }
+  }
 }
 
 .programs__title {
-  margin: 0;
-  padding-top: 29px;
-  padding-bottom: 30px;
-  padding-left: 70px;
+  margin: 9px 0 30px 70px;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
@@ -20,38 +51,46 @@
   color: @color-tertiary;
   text-transform: uppercase;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 24px;
-    left: 20px;
-    width: 50px;
-    min-height: 50px;
-    background: @color-primary;
-    border-radius: 50%;
+  @media @tablet-desktop {
+    margin: 0 0 24px;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  @media @desktop {
+    margin: 0 0 74px 160px;
   }
 }
 
 .programs__description {
-  max-width: 241px;
-  margin: 0;
-  padding-bottom: 21px;
-  font-size: 14px;
+  margin: 0 0 19px;
+  padding-bottom: 22px;
   line-height: 18px;
-  color: @basic-color;
-  border-bottom: 1px solid #d9d9d9;
-}
+  border-bottom: 1px solid @color-lightergray;
 
-.programs__link-wrapper {
-  padding-block: 20px;
+  @media @tablet-desktop {
+    margin-bottom: 53px;
+    padding: 0;
+    line-height: 24px;
+    border: none;
+  }
+
+  @media @desktop {
+    padding-bottom: 28px;
+  }
 }
 
 .programs__link {
   margin: 0;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   font-family: @font-primary;
   color: @color-tertiary;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
