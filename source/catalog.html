@@ -10,7 +10,14 @@
 
 <body class="page-body">
   <header class="page-header">
-    <a class="logo" href="index.html">
+    <a class="page-header__logo">
+      <picture>
+        <source media="(min-width:1280px)" srcset="img/logo-desktop.svg" width="70" height="59">
+        <source media="(min-width:768px)" srcset="img/logo-tablet.svg" width="60" height="50">
+        <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип Кэт энерджи">
+      </picture>
+    </a>
+    <a class="logo" aria-current="page">
       <img class="logo__image" src="img/logo-text.svg" width="101" height="18" alt="Логотип Кэт энерджи">
     </a>
     <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
@@ -286,8 +293,12 @@
         </div>
       </div>
       <div class="contacts__map map">
-        <img class="map__image" src="img/map.png" width="320" height="362" alt="Картинка карты">
-      </div>
+        <picture>
+          <source media="(min-width:1280px)" srcset="img/map-desktop.png" width="1440" height="400">
+          <source media="(min-width:768px)" srcset="img/map-tablet.png" width="768" height="400">
+        <img class="map__image" src="img/map.png" width="320" height="362" alt="Картинка карты" loading="lazy">
+      </picture>
+    </div>
     </section>
 
     <div class="footer__container">

@@ -23,14 +23,23 @@
     font-size: 20px;
     line-height: 1.5;
   }
+
+  &--opened {
+    @media @mobile {
+      position: absolute;
+      top: 11%;
+      left: 0;
+      min-width: 320px;
+      font-family: @font-primary;
+    }
+  }
 }
 
 .main-nav__list {
   margin: 0;
-}
 
-.main-nav__toggle {
-  @media @tablet-desktop {
-    display: none;
+  @media @mobile {
+    text-align: center;
+    border-top: 1px solid @color-line-wrapper;
   }
 }
