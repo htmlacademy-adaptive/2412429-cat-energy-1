@@ -91,7 +91,9 @@
     left: 0;
     width: 60px;
     min-height: 60px;
-    background: @color-primary;
+    background-color: @color-primary;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @media @tablet-desktop {
       top: 21px;
@@ -99,9 +101,27 @@
       min-height: 80px;
     }
   }
+
+  &--sheet::before {
+    background-image: url("../img/sheet.svg");
+  }
+
+  &--water::before {
+    background-image: url("../img/water.svg");
+  }
+
+  &--eat::before {
+    background-image: url("../img/eat.svg");
+  }
+
+  &--watch::before {
+    background-image: url("../img/watch.svg");
+  }
 }
 
+
 .advantages__description {
+  position: relative;
   margin: 0;
   line-height: 18px;
 

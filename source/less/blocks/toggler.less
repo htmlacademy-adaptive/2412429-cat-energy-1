@@ -9,13 +9,42 @@
 }
 
 .toggler__input {
+  position: relative;
   width: 30px;
   height: 30px;
   margin: 0;
+  border: 1px solid @color-gray;
   appearance: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    inset: 0;
+  }
+
+  &:hover {
+    border-color: @color-lightwhite-gray;
+  }
 
   @media @tablet-desktop {
     width: 40px;
     height: 40px;
+  }
+}
+
+.toggler__input[type="radio"] {
+  border-radius: 50%;
+
+  &:checked::before {
+    background-image: url("../img/radio-checked.svg");
+  }
+}
+
+.toggler__input[type="checkbox"] {
+  &:checked::before {
+    background-image: url("../img/checkbox-checked.svg");
   }
 }

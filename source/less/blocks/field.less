@@ -9,6 +9,16 @@
   background-color: @color-white;
   border: 1px solid @color-bordergray;
 
+  &:focus-visible {
+    outline: 2px solid @basic-color;
+    outline-offset: -2px;
+  }
+
+  &:hover {
+    outline: 1px solid @color-gray;
+    outline-offset: -1px;
+  }
+
   @media @tablet-desktop {
     min-height: 52px;
     padding: 11px 20px 9px;

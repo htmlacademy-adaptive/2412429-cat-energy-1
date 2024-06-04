@@ -1,5 +1,4 @@
 .main-nav {
-  display: none;
   list-style-type: none;
   font-size: 20px;
   line-height: 1;
@@ -24,6 +23,12 @@
     line-height: 1.5;
   }
 
+  &--closed {
+    @media @mobile {
+      display: none;
+    }
+  }
+
   &--opened {
     @media @mobile {
       position: absolute;
@@ -41,5 +46,11 @@
   @media @mobile {
     text-align: center;
     border-top: 1px solid @color-line-wrapper;
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  @media @mobile {
+    display: none;
   }
 }

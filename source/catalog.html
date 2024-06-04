@@ -10,20 +10,20 @@
 
 <body class="page-body">
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="logo">
       <picture>
-        <source media="(min-width:1280px)" srcset="img/logo-desktop.svg" width="70" height="59">
-        <source media="(min-width:768px)" srcset="img/logo-tablet.svg" width="60" height="50">
+        <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg" width="70" height="59">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="60" height="50">
         <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип Кэт энерджи">
       </picture>
     </a>
-    <a class="logo" aria-current="page">
+    <a class="page-header__logo-text logo logo">
       <img class="logo__image" src="img/logo-text.svg" width="101" height="18" alt="Логотип Кэт энерджи">
     </a>
-    <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+    <button class="page-header__humburger" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <nav class="page-header__main-nav main-nav main-nav--closed">
       <ul class="main-nav__list site-list">
         <li>
           <a class="site-list__link" href="index.html">
@@ -49,7 +49,7 @@
     <ul class="page-container__product-cards product-cards">
       <li class="product-cards__item">
         <picture>
-          <source media="(min-width:768px)" srcset="img/catalog-1-tablet.png" width="169" height="210">
+          <source media="(min-width: 768px)" srcset="img/catalog-1-tablet.png" width="169" height="210">
           <img class="product-cards__image" alt="Cat Energy PRO 500 г" src="img/catalog-1.png" width="140" height="107"
             loading="lazy">
         </picture>
@@ -75,7 +75,7 @@
 
       <li class="product-cards__item">
         <picture>
-          <source media="(min-width:768px)" srcset="img/catalog-2-tablet.png" width="169" height="210">
+          <source media="(min-width: 768px)" srcset="img/catalog-2-tablet.png" width="169" height="210">
           <img class="product-cards__image" alt="Cat Energy PRO 1000 г" src="img/catalog-2.png" width="140" height="107"
             loading="lazy">
         </picture>
@@ -101,7 +101,7 @@
 
       <li class="product-cards__item">
         <picture>
-          <source media="(min-width:768px)" srcset="img/catalog-3-tablet.png" width="169" height="210">
+          <source media="(min-width: 768px)" srcset="img/catalog-3-tablet.png" width="169" height="210">
           <img class="product-cards__image" alt="Cat Energy PRO 500 г" src="img/catalog-3.png" width="140" height="107"
             loading="lazy">
         </picture>
@@ -127,7 +127,7 @@
 
       <li class="product-cards__item">
         <picture>
-          <source media="(min-width:768px)" srcset="img/catalog-4-tablet.png" width="169" height="210">
+          <source media="(min-width: 768px)" srcset="img/catalog-4-tablet.png" width="169" height="210">
           <img class="product-cards__image" alt="Cat Energy PRO 1000 г" src="img/catalog-4.png" width="140" height="107"
             loading="lazy">
         </picture>
@@ -153,7 +153,7 @@
 
       <li class="product-cards__item">
         <picture>
-          <source media="(min-width:768px)" srcset="img/catalog-5-tablet.png" width="169" height="210">
+          <source media="(min-width: 768px)" srcset="img/catalog-5-tablet.png" width="169" height="210">
           <img class="product-cards__image" alt="Cat Energy Slim 500 г" src="img/catalog-5.png" width="140" height="107"
             loading="lazy">
         </picture>
@@ -179,7 +179,7 @@
 
       <li class="product-cards__item">
         <picture>
-          <source media="(min-width:768px)" srcset="img/catalog-6-tablet.png" width="169" height="210">
+          <source media="(min-width: 768px)" srcset="img/catalog-6-tablet.png" width="169" height="210">
           <img class="product-cards__image" alt="Cat Energy Slim 1000 г" src="img/catalog-6.png" width="140"
             height="107" loading="lazy">
         </picture>
@@ -205,7 +205,7 @@
 
       <li class="product-cards__item">
         <picture>
-          <source media="(min-width:768px)" srcset="img/catalog-7-tablet.png" width="169" height="210">
+          <source media="(min-width: 768px)" srcset="img/catalog-7-tablet.png" width="169" height="210">
           <img class="product-cards__image" alt="Cat Energy Slim 500 г" src="img/catalog-7.png" width="140" height="107"
             loading="lazy">
         </picture>
@@ -294,16 +294,18 @@
       </div>
       <div class="contacts__map map">
         <picture>
-          <source media="(min-width:1280px)" srcset="img/map-desktop.png" width="1440" height="400">
-          <source media="(min-width:768px)" srcset="img/map-tablet.png" width="768" height="400">
-        <img class="map__image" src="img/map.png" width="320" height="362" alt="Картинка карты" loading="lazy">
-      </picture>
-    </div>
+          <source media="(min-width: 1280px)" srcset="img/map-desktop.png" width="1440" height="400">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.png" width="768" height="400">
+          <img class="map__image" src="img/map.png" width="320" height="362" alt="Картинка карты" loading="lazy">
+        </picture>
+      </div>
     </section>
 
     <div class="footer__container">
       <a class="footer__logo logo" href="index.html">
-        <img class="logo__image" src="img/logo-text.svg" width="135" height="24" alt="Логотип Кэт энерджи">
+        <svg class="logo__image logo__image--footer" width="135" height="24" role="img" focusable="false">
+          <use href="img/logo-text.svg#logo-text" />
+        </svg>
       </a>
 
       <ul class="social-links footer__social-links">

@@ -6,6 +6,27 @@
   background-repeat: no-repeat;
   background-position: 0 0, 50% 100%;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 57px;
+    right: 100px;
+    width: 80px;
+    height: 83px;
+    background-image: url("../img/gift.svg");
+
+    @media @tablet-desktop {
+      top: 57px;
+      right: 0;
+      left: 78px;
+    }
+
+    @media @desktop {
+      top: 58px;
+      right: 81px;
+    }
+  }
+
   @media @tablet {
     padding: 70px 125px 70px calc(100% - 286px);
     background-image: @gradient-green, url("../img/cat-green-2-tablet.png");

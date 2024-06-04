@@ -4,37 +4,34 @@
   justify-content: space-between;
   align-items: center;
   grid-template-columns: 33px 101px 24px;
-  min-height: 65px; // убрать когда будет лого с картинкой
   padding-top: 13px;
   padding-bottom: 14px;
   gap: 20px;
 
   @media @tablet-desktop {
     grid-template-columns: 60px 101px 1fr;
-    min-height: 100px; // убрать когда будет лого с картинкой
     padding-top: 25px;
     padding-bottom: 25px;
   }
 
   @media @desktop {
-    min-height: 169px; // убрать когда будет лого с картинкой
     padding-top: 55px;
-    padding-bottom: 55px;
+    padding-bottom: 60px;
   }
 }
 
 .page-header__humburger {
   @media @mobile {
     position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
     border: none;
 
     &::before {
       content: "";
       position: absolute;
-      top: -11px;
-      left: -1px;
-      width: 24px;
-      height: 24px;
+      inset: 0;
       background-image: url("../img/humburger.svg");
     }
   }
@@ -52,10 +49,20 @@
 
   @media @desktop {
     max-width: 50%;
+    margin-top: 8px;
     margin-right: 0;
   }
 }
 
+.page-header--opened {
+  .page-header__humburger::before {
+    content: "";
+    background-image: url("../img/cross.svg");
+  }
+}
+
 .page-header__logo-image {
-  display: block;
+  &:hover {
+    opacity: 0.3;
+  }
 }
