@@ -9,6 +9,7 @@
   justify-self: start;
   float: left;
   margin: 2px 0 21px -2px;
+  padding: 0 22px 0 0;
   font-size: 24px;
   line-height: 26px;
   font-family: @font-primary;
@@ -21,14 +22,21 @@
     position: absolute;
     top: 40px;
     right: -70px;
-    left: -70px;
+    left: 0;
     z-index: -1;
     height: 2px;
     background-color: @color-primary;
 
+
     @media @tablet-desktop {
       top: 60px;
+      right: -100vw;
+      left: -100vw;
     }
+  }
+
+  @media @mobile {
+    max-width: 182px;
   }
 
   @media @tablet-desktop {

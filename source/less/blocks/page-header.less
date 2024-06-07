@@ -1,5 +1,6 @@
 .page-header {
   .container();
+  position: relative;
   display: grid;
   justify-content: space-between;
   align-items: center;
@@ -17,6 +18,31 @@
   @media @desktop {
     padding-top: 55px;
     padding-bottom: 60px;
+  }
+}
+
+.page-header--closed {
+  .page-header__main-nav {
+    @media @mobile {
+      display: none;
+    }
+  }
+}
+
+.page-header--opened {
+  @media @mobile {
+    .page-header__hamburger::before {
+      mask-image: url("../img/сross.svg");
+    }
+
+    .page-header__main-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: block;
+      min-width: 320px;
+      font-family: @font-primary;
+    }
   }
 }
 
@@ -45,24 +71,12 @@
   @media @tablet-desktop {
     margin-top: 2px;
     margin-right: 4px;
+    margin-left: auto;
   }
 
   @media @desktop {
     max-width: 50%;
     margin-top: 8px;
     margin-right: 0;
-  }
-}
-
-.page-header--opened {
-  .page-header__humburger::before {
-    content: "";
-    background-image: url("../img/cross.svg");
-  }
-}
-
-.page-header__logo-image {
-  &:hover {
-    opacity: 0.3;
   }
 }

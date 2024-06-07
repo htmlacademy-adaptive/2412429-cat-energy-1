@@ -10,8 +10,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: auto;
-    list-style-type: none;
     font-size: 18px;
     line-height: 24px;
     font-family: @font-primary;
@@ -22,22 +20,6 @@
     font-size: 20px;
     line-height: 1.5;
   }
-
-  &--closed {
-    @media @mobile {
-      display: none;
-    }
-  }
-
-  &--opened {
-    @media @mobile {
-      position: absolute;
-      top: 11%;
-      left: 0;
-      min-width: 320px;
-      font-family: @font-primary;
-    }
-  }
 }
 
 .main-nav__list {
@@ -46,11 +28,5 @@
   @media @mobile {
     text-align: center;
     border-top: 1px solid @color-line-wrapper;
-  }
-}
-
-.main-nav--closed .main-nav__list {
-  @media @mobile {
-    display: none;
   }
 }
