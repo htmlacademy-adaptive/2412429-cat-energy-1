@@ -1,9 +1,26 @@
 .program {
+  position: relative;
   display: grid;
   padding-top: 27px;
   padding-bottom: 20px;
   color: @color-white;
   --title-color: currentColor;
+
+  @media @mobile {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 198px;
+      left: 0;
+      z-index: -1;
+      background-color: #48474c;
+      background-image: @gradient-green, url("../img/cat-green.png");
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+    }
+  }
 
   @media @tablet-desktop {
     position: relative;
@@ -15,32 +32,7 @@
 
   @media @desktop {
     grid-template-columns: 1fr 1fr;
-    padding-top: 60px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 65px;
-    right: 0;
-    bottom: 198px;
-    left: 0;
-    z-index: -1;
-    background-color: #48474c;
-    background-image: @gradient-green, url("../img/cat-green.png");
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-  }
-
-  @media @desktop {
-    &::before {
-      top: 0;
-      bottom: -52px;
-      left: 50%;
-      background-color: #48474c;
-      background-image: @gradient-green, url("../img/cat-green-desktop.png");
-      background-position: 100% 100%;
-    }
+    padding-top: 55px;
   }
 }
 
@@ -50,10 +42,10 @@
 
   @media @tablet-desktop {
     display: grid;
+    gap: 16px;
     align-content: start;
     text-align: start;
     padding-inline: 90px;
-    gap: 16px;
   }
 
   @media @desktop {
@@ -86,7 +78,7 @@
 
 .program__image {
   order: 3;
-  margin: 30px 0 2px;
+  margin: 30px auto 2px;
 
   @media @tablet-desktop {
     position: relative;
