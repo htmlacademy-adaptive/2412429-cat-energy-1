@@ -46,15 +46,15 @@
     position: absolute;
     top: 21px;
     right: 0;
-    left: 28px;
+    left: 27px;
     width: 36px;
     height: 50px;
     background-image: url("../img/cat-black-one.svg");
     background-repeat: no-repeat;
 
     @media @tablet {
-      top: 82px;
-      left: 475px;
+      top: 81px;
+      left: 476px;
       width: 140px;
       height: 194px;
       background-size: 140px 194px;
@@ -74,15 +74,16 @@
     position: absolute;
     top: 34px;
     right: 0;
-    left: 10px;
+    left: 12px;
     width: 67px;
     height: 28px;
     background-image: url("../img/cat-black-two.svg");
     background-repeat: no-repeat;
+    background-size: 67px 28px;
 
     @media @tablet {
-      top: 136px;
-      left: 411px;
+      top: 135px;
+      left: 412px;
       width: 268px;
       height: 112px;
       background-size: 268px 112px;
@@ -128,6 +129,7 @@
     margin-bottom: 53px;
     padding: 0;
     line-height: 24px;
+    color: @color-tertiary;
     border: none;
   }
 
@@ -159,13 +161,18 @@
   &::before {
     content: "";
     position: absolute;
-    top: 9px;
-    right: 0;
+    top: 10px;
+    right: 15px;
     width: 30px;
     height: 10px;
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     background-position: 100% 50%;
+
+    @media @mobile {
+      top: 7px;
+      right: 24px;
+    }
   }
 
   &:hover::before {

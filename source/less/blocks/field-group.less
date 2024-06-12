@@ -21,3 +21,31 @@
     margin-bottom: -4px;
   }
 }
+
+.field-group__field-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+
+    @media @tablet-desktop {
+      top: 17px;
+      right: 15px;
+    }
+  }
+
+  &--mail::before {
+    background-image: url("../img/email.svg");
+  }
+
+  &--phone::before {
+    background-image: url("../img/phone.svg");
+  }
+}

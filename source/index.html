@@ -51,7 +51,7 @@
       <div class="program__wrapper">
         <h1 class="program__title title">Функциональное питание для котов</h1>
         <p class="program__text">Занялся собой? Займись котом!</p>
-        <button class="program__button button" type="button">Подобрать программу</button>
+        <a class="program__button button" type="button" href="form.htmlравки">Подобрать программу</a>
       </div>
       <picture>
         <source media="(min-width: 1280px)" srcset="img/content-picture-desktop.png" width="552" height="499">
@@ -59,9 +59,8 @@
         <img class="program__image" src="img/content-picture.png" width="280" height="270" loading="lazy"
           alt="Картинка банки с кормом">
       </picture>
+    </section>
   </div>
-  </section>
-
 
   <main class="main-container">
     <ul class="main-container__programs programs">
@@ -131,14 +130,27 @@
           </dl>
         </div>
         <div class="example__comparator comparator">
-          <img class="comparator__image" src="img/fat-cat.png" alt="Толстый котик" width="280" height="256">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/fat-cat-tablet.png" width="560" height="512">
+            <img class="comparator__image" src="img/fat-cat.png" alt="Толстый котик" width="280" height="256"
+              style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%)">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/slim-cat-tablet.png" width="560" height="512">
+            <img class="comparator__image" src="img/slim-cat.png" alt="Худой котик" width="280" height="256"
+              style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%)">
+          </picture>
+          <button class="comparator__button" type="button">
+            <svg class="comparator__slider" width="40" height="40" role="img" focusable="false">
+              <use href="img/thumb.svg#slider" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-
     <section class="contacts">
       <div class="contacts__container">
         <div class="contacts__content">
@@ -159,8 +171,8 @@
     </section>
 
     <div class="footer__container">
-      <a class="footer__logo logo" href="index.html">
-        <svg class="logo__image logo__image--colored" width="135" height="24" role="img" focusable="false">
+      <a class="footer__logo logo logo--colored" href="index.html">
+        <svg class="logo__image" width="135" height="24" role="img" focusable="false">
           <use href="img/logo-text.svg#logo-text" />
         </svg>
       </a>
@@ -200,7 +212,7 @@
     };
   </script>
   <script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js" defer></script>
-  <script src="./js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

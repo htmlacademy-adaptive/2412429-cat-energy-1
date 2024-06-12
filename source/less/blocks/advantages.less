@@ -3,6 +3,10 @@
   gap: 40px;
   padding-bottom: 29px;
 
+  @media @mobile {
+    gap: 39px;
+  }
+
   @media @tablet-desktop {
     padding-top: 25px;
     border-bottom: 1px solid @color-line-wrapper;
@@ -10,10 +14,12 @@
 
   @media @desktop {
     padding-top: 50px;
+    border-bottom: none;
   }
 }
 
 .advantages__title {
+  position: relative;
   margin: 0;
   font-weight: 400;
   font-size: 36px;
@@ -28,7 +34,8 @@
   }
 
   @media @desktop {
-    margin-bottom: 13px;
+    margin-top: 2px;
+    margin-bottom: 11px;
   }
 }
 

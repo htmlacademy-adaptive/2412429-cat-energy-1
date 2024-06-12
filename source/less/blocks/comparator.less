@@ -1,14 +1,64 @@
+.comparator {
+  position: relative;
+  width: 280px;
+  min-height: 256px;
+
+  @media @tablet-desktop {
+    width: 560px;
+    min-height: 512px;
+  }
+}
+
 .comparator__image {
+  position: absolute;
   display: block;
   margin: 0 auto;
+}
 
-  @media @tablet {
-    width: 560px;
-    height: 512px;
+.comparator__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 41%;
+  color: @color-light-brown;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: @color-primary;
+  }
+
+  &:active {
+    color: @color-dark-green;
+    opacity: 0.6;
+  }
+
+  @media @tablet-desktop {
+    left: 45%;
   }
 
   @media @desktop {
-    width: 560px;
-    height: 512px;
+    top: -80px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    width: 4px;
+    color: currentColor;
+    background-color: @color-light-brown;
+    border-radius: 2px;
+
+    &::before:hover {
+      background-color: @color-primary;
+    }
+
+    @media @tablet-desktop {
+      top: 80px;
+      height: 512px;
+    }
   }
 }

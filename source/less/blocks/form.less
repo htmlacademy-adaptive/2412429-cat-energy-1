@@ -27,11 +27,14 @@
     height: 2px;
     background-color: @color-primary;
 
-
     @media @tablet-desktop {
       top: 60px;
       right: -100vw;
       left: -100vw;
+    }
+
+    @media @desktop {
+      top: 24px;
     }
   }
 
@@ -40,7 +43,8 @@
   }
 
   @media @tablet-desktop {
-    margin: 2px 0 55px -2px;
+    margin: 2px 0 55px -40px;
+    padding: 0 40px 0 40px;
     font-size: 36px;
     line-height: 1;
   }

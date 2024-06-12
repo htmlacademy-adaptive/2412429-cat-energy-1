@@ -38,6 +38,10 @@
   border-radius: 50%;
 
   &:checked::before {
+    @media @mobile {
+      background-size: 13px 13px;
+    }
+
     background-image: url("../img/radio-checked.svg");
   }
 }
