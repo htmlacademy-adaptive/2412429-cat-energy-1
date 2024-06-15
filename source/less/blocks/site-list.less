@@ -33,12 +33,6 @@
   display: block;
   padding: 23px;
 
-  &:hover {
-    @media @tablet-desktop {
-      opacity: 0.6;
-    }
-  }
-
   @media @mobile {
     border-bottom: 1px solid @color-line-wrapper;
   }
@@ -58,3 +52,15 @@
     }
   }
 }
+
+.site-list__link[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+&:not([href]):hover,
+&:not([href]):active {
+  opacity: 1;
+}
+

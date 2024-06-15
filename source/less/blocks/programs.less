@@ -142,13 +142,19 @@
 .programs__link {
   position: relative;
   margin: 0;
-  padding-right: 65px;
+  padding-right: 45px;
   font-size: 16px;
   line-height: 1;
   font-family: @font-primary;
   color: @color-tertiary;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media @tablet-desktop {
+    padding-right: 53px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
 
   &:focus-visible {
     opacity: 0.6;
@@ -161,29 +167,23 @@
   &::before {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 30px;
+    top: 7px;
+    right: 8px;
+    width: 24px;
     height: 10px;
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     background-position: 100% 50%;
 
     @media @mobile {
-      top: 7px;
-      right: 24px;
+      top: 10px;
     }
   }
 
-  &:hover::before {
-    right: 0;
-    width: 32px;
-  }
-
+  &:hover::before,
   &:active::before {
     right: 0;
     width: 32px;
-    opacity: 0.3;
   }
 
   @media @tablet-desktop {

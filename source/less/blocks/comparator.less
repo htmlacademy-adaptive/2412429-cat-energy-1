@@ -19,22 +19,20 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 41%;
-  color: @color-light-brown;
+  left: 50%;
+  padding: 0;
+  color: @color-grayscale;
   background-color: transparent;
   border: none;
+  transform: translateX(-50%);
+  cursor: pointer;
 
   &:hover {
     color: @color-primary;
   }
 
   &:active {
-    color: @color-dark-green;
-    opacity: 0.6;
-  }
-
-  @media @tablet-desktop {
-    left: 45%;
+    color: rgba(@color-dark-green, 0.6);
   }
 
   @media @desktop {
@@ -46,19 +44,19 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 24px;
+    left: 50%;
     width: 4px;
-    color: currentColor;
-    background-color: @color-light-brown;
+    background-color: currentColor;
     border-radius: 2px;
+    transform: inherit;
 
-    &::before:hover {
-      background-color: @color-primary;
-    }
-
-    @media @tablet-desktop {
+    @media @desktop {
       top: 80px;
-      height: 512px;
+      bottom: 85px;
     }
   }
+}
+
+.comparator__slider {
+  position: relative;
 }
