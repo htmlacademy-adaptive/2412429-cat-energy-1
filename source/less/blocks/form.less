@@ -6,16 +6,45 @@
 }
 
 .form__title {
+  position: relative;
+  justify-self: start;
   float: left;
   margin: 2px 0 21px -2px;
+  padding: 0 22px 0 0;
   font-size: 24px;
   line-height: 26px;
   font-family: @font-primary;
   color: @color-tertiary;
   text-transform: none;
+  background-color: @color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -100vw;
+    left: 0;
+    z-index: -1;
+    height: 2px;
+    background-color: @color-primary;
+
+    @media @tablet-desktop {
+      top: 22px;
+      left: -100vw;
+    }
+
+    @media @desktop {
+      top: 24px;
+    }
+  }
+
+  @media @mobile {
+    max-width: 182px;
+  }
 
   @media @tablet-desktop {
-    margin: 2px 0 55px -2px;
+    margin: 2px 0 55px -40px;
+    padding: 0 40px 0 40px;
     font-size: 36px;
     line-height: 1;
   }

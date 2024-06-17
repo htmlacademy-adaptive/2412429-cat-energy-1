@@ -1,4 +1,5 @@
 .field {
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   min-height: 45px;
@@ -8,6 +9,20 @@
   text-transform: uppercase;
   background-color: @color-white;
   border: 1px solid @color-bordergray;
+
+  &:focus-visible {
+    outline: 2px solid @basic-color;
+    outline-offset: -2px;
+  }
+
+  &:hover {
+    outline: 1px solid @color-gray;
+    outline-offset: -1px;
+  }
+
+  &:user-invalid {
+    border-color: @color-light-red;
+  }
 
   @media @tablet-desktop {
     min-height: 52px;
@@ -30,5 +45,9 @@
     @media @desktop {
       margin-top: 3px;
     }
+  }
+
+  &--withicon {
+    padding-right: 40px;
   }
 }

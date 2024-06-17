@@ -8,7 +8,7 @@
   }
 
   @media @desktop {
-    padding-top: 0;
+    padding-top: 1px;
   }
 }
 
@@ -26,7 +26,7 @@
     line-height: 1;
 
     @media @desktop {
-      margin-bottom: 76px;
+      margin-bottom: 77px;
     }
   }
 }
@@ -44,7 +44,7 @@
     grid-template-columns: 432px 1fr;
     gap: 228px;
     padding-top: 68px;
-    padding-bottom: 75px;
+    padding-bottom: 0;
   }
 
   &::before {
@@ -92,19 +92,21 @@
 .example__params {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 0 20px;
+  margin: 0 0 21px;
   text-align: center;
   gap: 20px 30px;
 
   @media @tablet-desktop {
     grid-template-columns: 162px 162px 1fr;
-    gap: 43px;
+    margin: 0 0 20px;
     padding-bottom: 98px;
+    gap: 43px;
   }
 
   @media @desktop {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 66px 0 0;
+    padding-bottom: 75px;
   }
 }
 
@@ -190,7 +192,8 @@
 
 .example__comparator {
   @media @tablet-desktop {
-    margin: 0 -30px;
+    margin: 0 75px;
+    margin-top: -20px;
   }
 
   @media @desktop {

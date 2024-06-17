@@ -1,3 +1,27 @@
+.logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--colored {
+    color: @color-black;
+
+    &:hover {
+      color: @color-black-gray;
+      opacity: 1;
+    }
+
+    &:active {
+      color: @color-blacklight-gray;
+      opacity: 1;
+    }
+  }
+}
+
 .logo__image {
   display: block;
 }

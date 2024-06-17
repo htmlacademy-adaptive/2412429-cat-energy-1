@@ -1,35 +1,113 @@
 .page-header {
   .container();
+  position: relative;
+  z-index: 1;
   display: grid;
-  gap: 20px;
   justify-content: space-between;
   align-items: center;
-  min-height: 65px; // убрать когда будет лого с картинкой
+  grid-template-columns: 33px 101px 24px;
   padding-top: 13px;
   padding-bottom: 14px;
+  gap: 20px;
 
   @media @tablet-desktop {
     grid-template-columns: 174px 1fr;
-    min-height: 100px; // убрать когда будет лого с картинкой
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   @media @desktop {
-    min-height: 169px; // убрать когда будет лого с картинкой
-    padding-top: 55px;
-    padding-bottom: 55px;
+    grid-template-columns: 202px 1fr;
+    padding-top: 36px;
+    padding-bottom: 39px;
   }
 }
 
-.page-header__main-nav {
+.page-header--closed {
+  .page-header__nav {
+    @media @mobile {
+      display: none;
+    }
+  }
+}
+
+.page-header--opened {
+  .page-header__hamburger::before {
+    background-image: url("../img/сross.svg");
+  }
+
+  .page-header__nav {
+    display: block;
+  }
+}
+
+.page-header--no-js {
+  .page-header__hamburger {
+    display: none;
+  }
+
+  .page-header__nav {
+    @media @mobile {
+      position: static;
+      display: block;
+      grid-column: 1 / -1;
+      margin: -6px -20px -14px;
+    }
+  }
+}
+
+.page-header__hamburger {
+  @media @mobile {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("../img/hamburger.svg");
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+    }
+  }
+
+  @media @tablet-desktop {
+    display: none;
+  }
+}
+
+.page-header__nav {
+  @media @mobile {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+  }
+
   @media @tablet-desktop {
     margin-top: 2px;
     margin-right: 4px;
+    margin-left: auto;
   }
 
   @media @desktop {
     max-width: 50%;
+    margin-top: 8px;
     margin-right: 0;
+  }
+}
+
+.page-header__list {
+  @media @mobile {
+    margin: 0;
+  }
+}
+
+.page-header__logo-text {
+  @media @tablet-desktop {
+    display: none;
   }
 }

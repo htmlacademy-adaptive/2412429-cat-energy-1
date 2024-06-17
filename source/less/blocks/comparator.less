@@ -1,14 +1,62 @@
+.comparator {
+  position: relative;
+  width: 280px;
+  min-height: 256px;
+
+  @media @tablet-desktop {
+    width: 560px;
+    min-height: 512px;
+  }
+}
+
 .comparator__image {
+  position: absolute;
   display: block;
   margin: 0 auto;
+}
 
-  @media @tablet {
-    width: 560px;
-    height: 512px;
+.comparator__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  padding: 0;
+  color: @color-grayscale;
+  background-color: transparent;
+  border: none;
+  transform: translateX(-50%);
+  cursor: pointer;
+
+  &:hover {
+    color: @color-primary;
+  }
+
+  &:active {
+    color: rgba(@color-dark-green, 0.6);
   }
 
   @media @desktop {
-    width: 560px;
-    height: 512px;
+    top: -80px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: currentColor;
+    border-radius: 2px;
+    transform: inherit;
+
+    @media @desktop {
+      top: 80px;
+      bottom: 85px;
+    }
+  }
+}
+
+.comparator__slider {
+  position: relative;
 }
