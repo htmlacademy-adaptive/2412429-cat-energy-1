@@ -6,6 +6,11 @@
   background-repeat: no-repeat;
   background-position: 0 0, 97% 100%;
 
+  @media @retina {
+    background-image: @gradient-green, url("../img/cat-green-2@2x.png");
+    background-size: 245px 290px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -31,6 +36,11 @@
   @media @tablet {
     padding: 70px 125px 70px calc(100% - 286px);
     background-image: @gradient-green, url("../img/cat-green-2-tablet.png");
+
+    @media @retina {
+      background-image: @gradient-green, url("../img/cat-green-2-tablet@2x.png");
+      background-size: 707px 200px;
+    }
   }
 
   @media @desktop {
