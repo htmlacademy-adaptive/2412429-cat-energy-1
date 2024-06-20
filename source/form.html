@@ -174,10 +174,13 @@
       </div>
       <div class="contacts__map map">
         <picture>
+          <source type="image/webp" media="(min-width: 1280px)" srcset="img/map-desktop.webp, img/map-desktop@2x.webp 2x" width="1440" height="400">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp, img/map-tablet@2x.webp 2x" width="768" height="400">
+          <source type="image/webp" srcset="img/map.webp, img/map@2x.webp 2x" width="320" height="362">
           <source media="(min-width: 1280px)" srcset="img/map-desktop.png, img/map-desktop@2x.png 2x" width="1440" height="400">
           <source media="(min-width: 768px)" srcset="img/map-tablet.png, img/map-tablet@2x.png 2x" width="768" height="400">
           <img class="map__image" src="img/map.png" srcset="img/map@2x.png 2x" width="320" height="362" alt="Картинка карты" loading="lazy">
-        </picture>
+        </picture>>
       </div>
     </section>
 
