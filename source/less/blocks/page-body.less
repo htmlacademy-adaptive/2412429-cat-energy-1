@@ -24,6 +24,11 @@
       background-image: @gradient-green, url("../img/cat-green-desktop.png");
       background-repeat: no-repeat;
       background-position: 100% 100%;
+
+      @media @retina {
+        background-image: @gradient-green, url("../img/cat-green-desktop@2x.png");
+        background-size: 720px 694px;
+      }
     }
   }
 }
