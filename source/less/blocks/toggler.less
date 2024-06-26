@@ -42,12 +42,18 @@
       background-size: 13px 13px;
     }
 
-    background-image: url("../img/radio-checked.svg");
+    background-image: url("../img/stack.svg#radio-checked");
+    background-size: 18px 18px;
   }
 }
 
 .toggler__input[type="checkbox"] {
   &:checked::before {
-    background-image: url("../img/checkbox-checked.svg");
+    @media @mobile {
+      background-size: 18px 14px;
+    }
+
+    background-image: url("../img/stack.svg#checkbox-checked");
+    background-size: 26px 26px;
   }
 }

@@ -56,12 +56,12 @@
         <a class="program__button button" href="form.html">Подобрать программу</a>
       </div>
       <picture>
-        <source media="(min-width: 1280px)"
-          srcset="img/content-picture-desktop.png, img/content-picture-desktop@2x.png 2x" width="552" height="499">
-        <source media="(min-width: 768px)" srcset="img/content-picture-tablet.png, img/content-picture-tablet@2x.png 2x"
-          width="709" height="609">
-        <img class="program__image" src="img/content-picture.png" srcset="img/content-picture@2x.png 2x" width="280"
-          height="270" loading="lazy" alt="Картинка банки с кормом">
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/content-picture-desktop.webp, img/content-picture-desktop@2x.webp 2x" width="552" height="499">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content-picture-tablet.webp, img/content-picture-tablet@2x.webp 2x" width="709" height="609">
+        <source type="image/webp" srcset="img/content-picture.webp, img/content-picture@2x.webp 2x" width="280" height="270">
+        <source media="(min-width: 1280px)" srcset="img/content-picture-desktop.png, img/content-picture-desktop@2x.png 2x" width="552" height="499">
+        <source media="(min-width: 768px)" srcset="img/content-picture-tablet.png, img/content-picture-tablet@2x.png 2x" width="709" height="609">
+        <img class="program__image" src="img/content-picture.png" srcset="img/content-picture@2x.png 2x" width="280" height="270" loading="lazy" alt="Картинка банки с кормом">
       </picture>
     </section>
   </div>
@@ -135,20 +135,22 @@
         </div>
         <div class="example__comparator comparator">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/fat-cat-tablet.png, img/fat-cat-tablet@2x.png 2x" width="560"
-              height="512">
-            <img class="comparator__image" src="img/fat-cat.png" srcset="img/fat-cat@2x.png 2x" alt="Толстый котик"
-              width="280" height="256" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%)">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/fat-cat-tablet.webp, img/fat-cat-tablet@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" srcset="img/fat-cat.webp, img/fat-cat@2x.webp 2x" width="280" height="256">
+            <source media="(min-width: 768px)" srcset="img/fat-cat-tablet.png, img/fat-cat-tablet@2x.png 2x" width="560" height="512">
+            <img class="comparator__image" src="img/fat-cat.png" srcset="img/fat-cat@2x.png 2x" alt="Толстый котик" width="280" height="256"
+            style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%)">
           </picture>
           <picture>
-            <source media="(min-width: 768px)" srcset="img/slim-cat-tablet.png, img/slim-cat-tablet@2x.png 2x"
-              width="560" height="512">
-            <img class="comparator__image" src="img/slim-cat.png" srcset="img/slim-cat@2x.png 2x" alt="Худой котик"
-              width="280" height="256" style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%)">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/slim-cat-tablet.webp, img/slim-cat-tablet@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" srcset="img/slim-cat.webp, img/slim-cat@2x.webp 2x" width="280" height="256">
+            <source media="(min-width: 768px)" srcset="img/slim-cat-tablet.png, img/slim-cat-tablet@2x.png 2x" width="560" height="512">
+            <img class="comparator__image" src="img/slim-cat.png" srcset="img/slim-cat@2x.png 2x" alt="Худой котик" width="280" height="256"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%)">
           </picture>
           <button class="comparator__button" type="button">
             <svg class="comparator__slider" width="40" height="40" role="presentation" focusable="false">
-              <use href="img/thumb.svg#slider" />
+              <use href="img/stack.svg#thumb" />
             </svg>
           </button>
         </div>
