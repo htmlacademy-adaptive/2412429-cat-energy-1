@@ -5,7 +5,6 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
-// import squoosh from 'gulp-libsquoosh';
 import optimizeImages from 'gulp-imagemin';
 import optimizeJpeg from 'imagemin-mozjpeg';
 import optimizePng from 'imagemin-pngquant';
@@ -95,13 +94,11 @@ const copy = () => {
 };
 
 
-
 // Clean
 
 const clean = () => {
   return deleteAsync('build');
 };
-
 
 
 // Server
@@ -148,6 +145,7 @@ const watcher = () => {
   gulp.watch(['public/**', '!public/img/**'], reload);
 
 }
+
 
 // Build
 

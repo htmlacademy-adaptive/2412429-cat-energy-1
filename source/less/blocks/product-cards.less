@@ -50,6 +50,31 @@
     padding-top: 80px;
     text-align: center;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 26px;
+      left: 125px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/stack.svg#plus");
+      background-size: 30px 30px;
+
+      @media @tablet-desktop {
+        top: 49px;
+        left: 130px;
+        width: 60px;
+        height: 60px;
+        background-image: url("../img/stack.svg#plus-tablet");
+        background-size: 60px 60px;
+
+        @media @desktop {
+          top: 48px;
+          left: 90px;
+        }
+      }
+    }
+
     @media @tablet-desktop {
       padding-top: 160px;
       background-color: transparent;
