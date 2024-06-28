@@ -20,16 +20,6 @@
     }
   }
 
-  &--secondary {
-    color: @basic-color;
-    background-color: @color-white-gray;
-
-    &:hover,
-    &:active {
-      background-color: @color-line-wrapper;
-    }
-  }
-
   &:hover {
     background-color: @color-dark-green;
   }
@@ -37,5 +27,16 @@
   &:active {
     color: rgba(255, 255, 2557, 0.3);
     background-color: @color-dark-green;
+  }
+
+  &--secondary {
+    color: @basic-color;
+    background-color: @color-white-gray;
+
+    &:hover,
+    &:active {
+      color: @basic-color;
+      background-color: @color-line-wrapper;
+    }
   }
 }

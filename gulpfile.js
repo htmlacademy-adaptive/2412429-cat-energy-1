@@ -1,9 +1,15 @@
 import gulp from 'gulp';
+import include from 'gulp-include';
+import gulpIf from 'gulp-if';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import sortMediaQueries from 'postcss-sort-media-queries';
+import cssnano from 'cssnano';
 import htmlmin from 'gulp-htmlmin';
+import { htmlValidator } from 'gulp-w3c-html-validator';
+import bemlinter from 'gulp-html-bemlinter';
 import terser from 'gulp-terser';
 import optimizeImages from 'gulp-imagemin';
 import optimizeJpeg from 'imagemin-mozjpeg';
@@ -15,37 +21,56 @@ import { deleteAsync } from 'del';
 import webp from 'gulp-webp';
 import browser from 'browser-sync';
 
+const isBuild = process.env.npm_lifecycle_event === 'build';
+const dist = isBuild ? 'build' : 'dev';
 
 // Styles
 
-export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
+const styles = () => {
+  return gulp.src('source/less/style.less', { sourcemaps: !isBuild })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
+      sortMediaQueries(),
       autoprefixer()
     ]))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulpIf(isBuild, postcss([
+      cssnano({
+        preset: ['default', { cssDeclarationSorter: false }]
+      })
+    ])))
+    .pipe(gulp.dest(`${dist}/css`, { sourcemaps: '.' }))
     .pipe(browser.stream());
-}
+};
 
 
 // HTML
 
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'));
-}
+    .pipe(gulpIf(!isBuild, include()))
+    .pipe(gulpIf(isBuild, htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+    })))
+    .pipe(gulp.dest(dist));
+};
+
+export const lintHtml = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlValidator.analyzer({ ignoreMessages: /^Trailing slash/ }))
+    .pipe(htmlValidator.reporter({ throwErrors: true }))
+    .pipe(bemlinter());
+};
 
 
 // Scripts
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
-    .pipe(terser())
-    .pipe(gulp.dest('build/js'));
-}
+    .pipe(gulpIf(isBuild, terser()))
+    .pipe(gulp.dest(`${dist}/js`));
+};
 
 
 // Img
@@ -72,7 +97,7 @@ const images = () => {
 const createWebp = () => {
   return gulp.src('public/img/**/*.{jpg,png}')
     .pipe(webp({ quality: 75 }))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest(`${dist}/img`));
 };
 
 
@@ -82,14 +107,18 @@ export const createSprite = () => {
   return gulp.src('source/icons/**/*.svg')
     .pipe(optimizeImages([optimizeSvg(svgoConfig)]))
     .pipe(stacksvg())
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest(`${dist}/img`));
 };
 
 
 // Copy
 
 const copy = () => {
-  return gulp.src(['public', '!public/{img,pixelperfect}/**'])
+  return gulp.src([
+    'public/**',
+    '!public/{img,pixelperfect}/**',
+    '!public/**/README*'
+  ])
     .pipe(gulp.dest('build'));
 };
 
@@ -97,7 +126,7 @@ const copy = () => {
 // Clean
 
 const clean = () => {
-  return deleteAsync('build');
+  return deleteAsync(dist);
 };
 
 
@@ -106,14 +135,14 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: ['build', 'public']
+      baseDir: [dist, 'public']
     },
     cors: true,
     notify: false,
     ui: false,
   });
   done();
-}
+};
 
 
 // Reload
@@ -121,7 +150,7 @@ const server = (done) => {
 const reload = (done) => {
   browser.reload();
   done();
-}
+};
 
 
 // Watcher
@@ -136,15 +165,14 @@ const watcher = () => {
       series(function createWebp() {
         return src(img)
           .pipe(webp({ quality: 75 }))
-          .pipe(dest(img.replace(/^public\/(.*)\/.*/, 'build/$2')));
+          .pipe(dest(img.replace(/^public\/(.*)\/.*/, `${dist}/$2`)));
       }, reload)();
     }
   });
   gulp.watch('source/icons/**/*.svg', gulp.series(createSprite, reload));
   gulp.watch('public/img/**', gulp.series(createWebp, reload));
   gulp.watch(['public/**', '!public/img/**'], reload);
-
-}
+};
 
 
 // Build
@@ -160,8 +188,7 @@ export const build = gulp.series(
     createSprite,
     createWebp
   )
-)
-
+);
 
 export default gulp.series(
   clean,

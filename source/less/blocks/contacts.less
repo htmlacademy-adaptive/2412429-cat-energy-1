@@ -1,12 +1,10 @@
 .contacts {
   position: relative;
   background-color: @color-white;
-}
 
-@media @desktop {
-  min-height: 198px;
-  padding-block: 96px 104px;
-  background-color: @color-white;
+  &--gray {
+    background-color: @color-white-gray;
+  }
 }
 
 .contacts__container {
@@ -40,6 +38,7 @@
 
 .contacts__text {
   margin: 0;
+  padding-right: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;

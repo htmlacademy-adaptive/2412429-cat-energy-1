@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="img/png" href="img/favicon.png">
+  <link rel="preload" href="fonts/latoregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
 </head>
 
 <body class="page-body">
@@ -162,7 +165,7 @@
   </main>
 
   <footer class="footer">
-    <section class="contacts">
+    <section class="contacts contacts--gray">
       <div class="contacts__container">
         <div class="contacts__content">
           <h2 class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров</h2>
@@ -174,12 +177,17 @@
       </div>
       <div class="contacts__map map">
         <picture>
-          <source type="image/webp" media="(min-width: 1280px)" srcset="img/map-desktop.webp, img/map-desktop@2x.webp 2x" width="1440" height="400">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp, img/map-tablet@2x.webp 2x" width="768" height="400">
+          <source type="image/webp" media="(min-width: 1280px)"
+            srcset="img/map-desktop.webp, img/map-desktop@2x.webp 2x" width="1440" height="400">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp, img/map-tablet@2x.webp 2x"
+            width="768" height="400">
           <source type="image/webp" srcset="img/map.webp, img/map@2x.webp 2x" width="320" height="362">
-          <source media="(min-width: 1280px)" srcset="img/map-desktop.png, img/map-desktop@2x.png 2x" width="1440" height="400">
-          <source media="(min-width: 768px)" srcset="img/map-tablet.png, img/map-tablet@2x.png 2x" width="768" height="400">
-          <img class="map__image" src="img/map.png" srcset="img/map@2x.png 2x" width="320" height="362" alt="Картинка карты" loading="lazy">
+          <source media="(min-width: 1280px)" srcset="img/map-desktop.png, img/map-desktop@2x.png 2x" width="1440"
+            height="400">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.png, img/map-tablet@2x.png 2x" width="768"
+            height="400">
+          <img class="map__image" src="img/map.png" srcset="img/map@2x.png 2x" width="320" height="362"
+            alt="Картинка карты" loading="lazy">
         </picture>>
       </div>
     </section>
@@ -220,12 +228,7 @@
     </div>
   </footer>
 
-  <script>  window.pixelperfect = {
-      breakpoints: [320, 768, 1440],
-      ext: 'png',
-    };
-  </script>
-  <script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js" defer></script>
+  <!--=include templates/pixelperfect.html -->
   <script src="js/scripts.js"></script>
 </body>
 

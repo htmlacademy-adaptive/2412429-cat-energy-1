@@ -1,16 +1,31 @@
 .options {
+  position: relative;
   display: grid;
+  padding-left: 0;
   list-style: none;
   gap: 13px;
 
+  @media @tablet-desktop {
+    padding: 23px 27px;
+    border: 1px solid @color-bordergray;
+  }
+
+  @media @desktop {
+    padding: 25px 28px;
+  }
+
   &--checkbox {
     @media @tablet-desktop {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0;
+      border: none;
       gap: 32px 62px;
-      margin-top: -17px;
     }
 
     @media @desktop {
+      grid-template-columns: repeat(4, 1fr);
       gap: 82px;
+      padding: 0;
     }
   }
 }

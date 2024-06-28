@@ -54,7 +54,8 @@
 
     @media @tablet {
       top: 81px;
-      left: 476px;
+      right: 93px;
+      left: auto;
       width: 140px;
       height: 194px;
       background-size: 140px 194px;
@@ -83,7 +84,8 @@
 
     @media @tablet {
       top: 135px;
-      left: 412px;
+      right: 30px;
+      left: auto;
       width: 268px;
       height: 112px;
       background-size: 268px 112px;
@@ -167,27 +169,21 @@
   &::before {
     content: "";
     position: absolute;
-    top: 9px;
-    right: 8px;
-    width: 24px;
+    top: 7px;
+    right: 0;
+    width: 32px;
     height: 10px;
     background-image: url("../img/stack.svg#arrow");
     background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-position: top 0 right 8px;
 
-    @media @mobile {
-      top: 10px;
+    @media @tablet-desktop {
+      top: 9px;
     }
   }
 
   &:hover::before,
   &:active::before {
-    right: 0;
-    width: 32px;
-  }
-
-  @media @tablet-desktop {
-    font-size: 20px;
-    line-height: 1.5;
+    background-position: 0 0;
   }
 }
