@@ -89,7 +89,9 @@ export const createSprite = () => {
 // Copy
 
 const copy = () => {
-  return gulp.src(['public', '!public/{img,pixelperfect}/**'])
+  return gulp.src(['public/**',
+    // '!public/{img,pixelperfect}/**'])
+  ])
     .pipe(gulp.dest('build'));
 };
 

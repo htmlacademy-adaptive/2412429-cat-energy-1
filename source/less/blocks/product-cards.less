@@ -54,24 +54,19 @@
       content: "";
       position: absolute;
       top: 26px;
-      left: 125px;
+      left: 50%;
       width: 30px;
       height: 30px;
       background-image: url("../img/stack.svg#plus");
       background-size: 30px 30px;
+      transform: translateX(-50%);
 
       @media @tablet-desktop {
         top: 49px;
-        left: 130px;
         width: 60px;
         height: 60px;
         background-image: url("../img/stack.svg#plus-tablet");
         background-size: 60px 60px;
-
-        @media @desktop {
-          top: 48px;
-          left: 90px;
-        }
       }
     }
 
