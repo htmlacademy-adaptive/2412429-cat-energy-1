@@ -33,7 +33,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "lint": "gulp lintHtml && run editorconfig && npm run stylelint",
+    "lint": "gulp lintHtml && npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "preview": "sirv build",
     "start": "gulp"
