@@ -6,10 +6,15 @@
   @media @tablet-desktop {
     gap: 19px;
   }
+
+  &:has(:disabled) {
+    opacity: 0.3;
+  }
 }
 
 .toggler__input {
   position: relative;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
   margin: 0;

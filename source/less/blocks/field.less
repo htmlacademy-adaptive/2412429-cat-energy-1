@@ -2,6 +2,7 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
+  min-width: 50%;
   min-height: 45px;
   padding: 11px 15px 8px;
   font: inherit;
@@ -10,18 +11,18 @@
   background-color: @color-white;
   border: 1px solid @color-bordergray;
 
-  &:focus-visible {
-    outline: 2px solid @basic-color;
-    outline-offset: -2px;
-  }
-
   &:hover {
-    outline: 1px solid @color-gray;
-    outline-offset: -1px;
+    border-color: @color-gray;
   }
 
   &:user-invalid {
-    border-color: @color-light-red;
+    outline: 2px solid @color-light-red;
+    outline-offset: -2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @basic-color;
+    outline-offset: -2px;
   }
 
   @media @tablet-desktop {
@@ -49,5 +50,9 @@
 
   &--withicon {
     padding-right: 40px;
+
+    @media @tablet-desktop {
+      padding-right: 40px;
+    }
   }
 }

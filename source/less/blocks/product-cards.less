@@ -81,7 +81,13 @@
   }
 }
 
+.product-cards__image-link {
+  align-self: center;
+}
+
 .product-cards__image {
+  display: block;
+
   @media @tablet-desktop {
     margin: -110px auto 24px;
   }
@@ -117,7 +123,15 @@
   }
 
   @media @desktop {
-    margin: 0 10px 24px;
+    margin: 0 10px 23px;
+  }
+
+  &--secondary {
+    color: @color-black;
+
+    @media @desktop {
+      margin-bottom: 26px;
+    }
   }
 }
 
