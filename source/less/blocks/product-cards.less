@@ -83,11 +83,11 @@
 
 .product-cards__image {
   @media @tablet-desktop {
-    margin: -110px auto 24px;
+    margin: -110px 40px 20px;
   }
 
   @media @desktop {
-    margin: -108px auto 12px;
+    margin: -108px auto 9px;
   }
 }
 
@@ -117,7 +117,15 @@
   }
 
   @media @desktop {
-    margin: 0 10px 24px;
+    margin: 0 10px 23px;
+  }
+
+  &--secondary {
+    color: @color-black;
+
+    @media @desktop {
+      margin-bottom: 26px;
+    }
   }
 }
 
@@ -167,7 +175,7 @@
 
 .product-cards__button {
   grid-column: 1/-1;
-  margin-top: 16px;
+  margin-top: 12px;
 
   @media @tablet-desktop {
     margin-top: auto;

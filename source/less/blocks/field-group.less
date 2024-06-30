@@ -1,17 +1,21 @@
 .field-group {
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: auto 1fr;
   font-size: 16px;
   line-height: 18px;
   font-family: @font-primary;
   text-transform: uppercase;
   gap: 14px;
 
+  label {
+    flex-shrink: 0;
+    max-width: 50%;
+  }
+
   @media @tablet-desktop {
+    gap: 13px;
     font-size: 20px;
     line-height: 1.5;
-    gap: 13px;
   }
 }
 
@@ -24,8 +28,9 @@
 
 .field-group__field-wrapper {
   position: relative;
+  width: 100%;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     top: 13px;
@@ -33,6 +38,7 @@
     z-index: 1;
     width: 20px;
     height: 20px;
+    background-color: @color-black-light;
     background-size: 20px 20px;
 
     @media @tablet-desktop {
@@ -41,11 +47,19 @@
     }
   }
 
-  &--mail::before {
-    background-image: url("../img/stack.svg#email");
+  &--mail::after {
+    mask-image: url("../img/stack.svg#email");
   }
 
-  &--phone::before {
-    background-image: url("../img/stack.svg#phone");
+  &--phone::after {
+    mask-image: url("../img/stack.svg#phone");
+  }
+
+  &:has(:user-invalid)::after {
+    background-color: @color-light-red;
+  }
+
+  &:has(:focus)::after {
+    background-color: @color-primary;
   }
 }
